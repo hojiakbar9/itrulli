@@ -54,5 +54,29 @@
     "stat_3_value": "50+",
     "cta": "Read more"
   }
+,
+  "Testimonials": {
+    "kicker": "Guestbook",
+    "headline": "What our guests say",
+    "description": "We love seeing you happy. Here are a few words from our community.",
+    "reviews": {
+      "r1": {
+        "text": "The best pistachio ice cream I've ever had outside of Italy. Incredibly creamy!",
+        "author": "Julia Müller",
+        "date": "2 weeks ago"
+      },
+      "r2": {
+        "text": "Finally an ice cream shop that uses real organic ingredients. You can taste the difference immediately.",
+        "author": "Thomas Weber",
+        "date": "1 month ago"
+      },
+      "r3": {
+        "text": "Perfect espresso and the staff is super friendly. A little piece of holiday.",
+        "author": "Marco Rossi",
+        "date": "Yesterday"
+      }
+    },
+    "cta_google": "Read all reviews on Google"
+  }
 
 }

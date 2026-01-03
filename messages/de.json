@@ -53,5 +53,30 @@
     "stat_3_label": "Sorten",
     "stat_3_value": "50+",
     "cta": "Mehr über uns"
+  },
+  
+  "Testimonials": {
+    "kicker": "Gästebuch",
+    "headline": "Das sagen unsere Gäste",
+    "description": "Wir lieben es, euch glücklich zu sehen. Hier sind einige Stimmen aus unserer Community.",
+    "reviews": {
+      "r1": {
+        "text": "Das beste Pistazieneis, das ich je außerhalb von Italien gegessen habe. Unglaublich cremig!",
+        "author": "Julia Müller",
+        "date": "Vor 2 Wochen"
+      },
+      "r2": {
+        "text": "Endlich eine Eisdiele, die echte Bio-Zutaten verwendet. Man schmeckt den Unterschied sofort.",
+        "author": "Thomas Weber",
+        "date": "Vor 1 Monat"
+      },
+      "r3": {
+        "text": "Perfekter Espresso und das Personal ist super freundlich. Ein kleines Stück Urlaub.",
+        "author": "Marco Rossi",
+        "date": "Gestern"
+      }
+    },
+    "cta_google": "Alle Bewertungen auf Google lesen"
   }
+
 }

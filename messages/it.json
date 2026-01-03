@@ -52,5 +52,29 @@
     "stat_3_label": "Gusti",
     "stat_3_value": "50+",
     "cta": "Scopri di più"
+  }, 
+  "Testimonials": {
+    "kicker": "Dicono di noi",
+    "headline": "Le parole dei nostri ospiti",
+    "description": "Amiamo vedervi felici. Ecco alcune opinioni dalla nostra community.",
+    "reviews": {
+      "r1": {
+        "text": "Il miglior pistacchio che abbia mai mangiato fuori dall'Italia. Incredibilmente cremoso!",
+        "author": "Julia Müller",
+        "date": "2 settimane fa"
+      },
+      "r2": {
+        "text": "Finalmente una gelateria che usa veri ingredienti biologici. La differenza si sente.",
+        "author": "Thomas Weber",
+        "date": "1 mese fa"
+      },
+      "r3": {
+        "text": "Espresso perfetto e personale gentilissimo. Un piccolo angolo di vacanza.",
+        "author": "Marco Rossi",
+        "date": "Ieri"
+      }
+    },
+    "cta_google": "Leggi tutte le recensioni su Google"
   }
+
 }
