@@ -36,3 +36,14 @@ h1, h2, h3, h4, h5, h6 {
 .animate-float {
     animation: float-smooth 6s ease-in-out infinite;
 }
+
+/* Utility to hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Utility to hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

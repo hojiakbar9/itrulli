@@ -16,5 +16,28 @@
     "cta_locations": "Locations",
     "badge_title": "Flavor of the Month",
     "badge_flavor": "Pistachio Bronte DOP"
+  },"Featured": {
+    "kicker": "Our Favorites",
+    "headline": "The Classics",
+    "description": "These flavors are a must-try. Handmade daily using traditional family recipes and the finest ingredients.",
+    "cta_all": "View all flavors",
+    "flavors": {
+      "pistachio": {
+        "name": "Pistachio Bronte",
+        "desc": "100% Pistachios from Sicily (DOP)"
+      },
+      "chocolate": {
+        "name": "Dark Chocolate",
+        "desc": "Intense dark chocolate, lactose-free"
+      },
+      "lemon": {
+        "name": "Amalfi Lemon",
+        "desc": "Refreshing sorbet, vegan"
+      },
+      "stracciatella": {
+        "name": "Stracciatella",
+        "desc": "Cream gelato with crunchy chocolate chips"
+      }
+    }
   }
 }

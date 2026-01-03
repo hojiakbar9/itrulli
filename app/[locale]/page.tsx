@@ -1,3 +1,4 @@
+import FeaturedFlavors from "../componets/FeaturedFlavors";
 import Hero from "../componets/Hero";
 
 export default async function HomePage({
@@ -10,6 +11,7 @@ export default async function HomePage({
   return (
     <main>
       <Hero locale={locale} />
+      <FeaturedFlavors locale={locale} />
     </main>
   );
 }

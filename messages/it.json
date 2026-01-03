@@ -16,5 +16,28 @@
     "cta_locations": "Dove Siamo",
     "badge_title": "Gusto del Mese",
     "badge_flavor": "Pistacchio Bronte DOP"
+  },"Featured": {
+    "kicker": "I Nostri Preferiti",
+    "headline": "I Classici",
+    "description": "Questi gusti non possono mancare durante la tua visita. Fatti a mano seguendo le ricette tradizionali di famiglia.",
+    "cta_all": "Vedi tutti i gusti",
+    "flavors": {
+      "pistachio": {
+        "name": "Pistacchio Bronte",
+        "desc": "100% Pistacchi di Sicilia (DOP)"
+      },
+      "chocolate": {
+        "name": "Cioccolato Nero",
+        "desc": "Cioccolato fondente intenso, senza lattosio"
+      },
+      "lemon": {
+        "name": "Limone di Amalfi",
+        "desc": "Sorbetto rinfrescante, vegano"
+      },
+      "stracciatella": {
+        "name": "Stracciatella",
+        "desc": "Fiordilatte con scaglie di cioccolato croccante"
+      }
+    }
   }
 }

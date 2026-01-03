@@ -16,5 +16,28 @@
     "cta_locations": "Standorte",
     "badge_title": "Eis des Monats",
     "badge_flavor": "Pistazie Bronte DOP"
+  },"Featured": {
+    "kicker": "Unsere Lieblinge",
+    "headline": "Die Klassiker",
+    "description": "Diese Sorten dürfen bei keinem Besuch fehlen. Handgemacht nach traditionellen Familienrezepten.",
+    "cta_all": "Alle Sorten ansehen",
+    "flavors": {
+      "pistachio": {
+        "name": "Pistacchio Bronte",
+        "desc": "100% Pistazien aus Sizilien (DOP)"
+      },
+      "chocolate": {
+        "name": "Cioccolato Nero",
+        "desc": "Dunkle Schokolade, laktosefrei"
+      },
+      "lemon": {
+        "name": "Limone di Amalfi",
+        "desc": "Erfrischendes Sorbet, vegan"
+      },
+      "stracciatella": {
+        "name": "Stracciatella",
+        "desc": "Sahneeis mit knackigen Schokostücken"
+      }
+    }
   }
 }
