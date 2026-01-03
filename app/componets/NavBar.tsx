@@ -14,7 +14,6 @@ export default function Navbar() {
   const [isPending, startTransition] = useTransition();
   const [isOpen, setIsOpen] = useState(false);
 
-  // --- LOGIK: Sprachwechsel ---
   const onSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const nextLocale = e.target.value;
     startTransition(() => {
@@ -25,38 +24,35 @@ export default function Navbar() {
 
   const closeMenu = () => setIsOpen(false);
 
-  // Helper für aktiven Status (genauer Match für Home, "includes" für Subseiten)
   const isActive = (path: string) => {
     if (path === "") return pathname === `/${locale}`;
     return pathname.startsWith(`/${locale}${path}`);
   };
 
-  // Liste der Links für sauberen Code
   const navItems = [
-    { key: "home", path: "" }, // Leerer Pfad = Root
+    { key: "home", path: "" },
     { key: "menu", path: "/menu" },
     { key: "gallery", path: "/gallery" },
-    { key: "hours", path: "/hours" }, // Oder /location
+    { key: "hours", path: "/hours" },
     { key: "contact", path: "/contact" },
     { key: "careers", path: "/careers" },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#FDFBF7] border-b border-stone-200 shadow-sm font-sans">
+    <nav className="sticky top-0 z-50 bg-background shadow-sm font-sans transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          {/* 1. LOGO */}
-          <div className="flex-shrink-0 flex items-center mr-4">
+          {/* LOGO */}
+          <div className="shrink-0 flex items-center mr-4">
             <Link
               href={`/${locale}`}
-              className="text-2xl lg:text-3xl font-serif text-[#3B2F2F] font-bold tracking-tight hover:text-[#93C572] transition-colors"
+              className="text-2xl lg:text-3xl font-serif text-foreground font-bold tracking-tight hover:text-primary transition-colors"
             >
               iTrulli
             </Link>
           </div>
 
-          {/* 2. DESKTOP NAVIGATION */}
-          {/* "hidden lg:flex" bedeutet: Auf Tablets versteckt (Hamburger), nur auf großen Screens sichtbar, da Menü sehr lang ist */}
+          {/* DESKTOP NAV */}
           <div className="hidden xl:flex space-x-6 items-center">
             {navItems.map((item) => (
               <NavLink
@@ -68,13 +64,13 @@ export default function Navbar() {
               </NavLink>
             ))}
 
-            {/* Language Dropdown */}
-            <div className="relative border-l border-stone-300 pl-4 ml-2">
+            {/* Language Switcher */}
+            <div className="relative border-l border-muted pl-4 ml-2">
               <select
                 defaultValue={locale}
                 disabled={isPending}
                 onChange={onSelectChange}
-                className="bg-transparent text-[#3B2F2F] text-sm font-bold cursor-pointer outline-none hover:text-[#93C572] transition-colors"
+                className="bg-transparent text-foreground text-sm font-bold cursor-pointer outline-none hover:text-primary transition-colors focus:ring-0 border-none"
               >
                 <option value="de">DE</option>
                 <option value="it">IT</option>
@@ -83,21 +79,21 @@ export default function Navbar() {
             </div>
 
             {/* CTA Button */}
+
             <Link
               href={`/${locale}/contact`}
-              className="bg-[#93C572] text-white px-5 py-2 rounded-full font-medium hover:bg-[#7fae61] transition-colors shadow-sm whitespace-nowrap"
+              className="bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-primary-hover transition-colors shadow-sm whitespace-nowrap"
             >
               {t("cta_visit")}
             </Link>
           </div>
 
-          {/* 3. MOBILE & TABLET HAMBURGER (Sichtbar unter xl Screens) */}
+          {/* MOBILE HAMBURGER */}
           <div className="flex items-center xl:hidden gap-4">
-            {/* Mobile Lang Switcher */}
             <select
               defaultValue={locale}
               onChange={onSelectChange}
-              className="bg-transparent text-sm font-bold text-[#3B2F2F] border-none focus:ring-0 p-0"
+              className="bg-transparent text-sm font-bold text-foreground border-none focus:ring-0 p-0"
             >
               <option value="de">DE</option>
               <option value="it">IT</option>
@@ -106,7 +102,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#3B2F2F] hover:text-[#93C572] focus:outline-none p-2"
+              className="text-foreground hover:text-primary focus:outline-none p-2"
               aria-label="Menü öffnen"
             >
               <svg
@@ -136,9 +132,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 4. MOBILE DROPDOWN MENU */}
+      {/* MOBILE DROPDOWN */}
       {isOpen && (
-        <div className="xl:hidden bg-[#FDFBF7] border-t border-stone-100 shadow-lg absolute w-full left-0 h-screen overflow-y-auto pb-20">
+        <div className="xl:hidden bg-background border-t border-muted shadow-lg absolute w-full left-0 h-screen overflow-y-auto pb-20">
           <div className="px-4 pt-4 pb-6 space-y-2">
             {navItems.map((item) => (
               <MobileNavLink
@@ -151,11 +147,11 @@ export default function Navbar() {
               </MobileNavLink>
             ))}
 
-            <div className="pt-6 mt-6 border-t border-stone-200">
+            <div className="pt-6 mt-6 border-t border-muted">
               <Link
                 href={`/${locale}/contact`}
                 onClick={closeMenu}
-                className="block w-full text-center bg-[#93C572] text-white px-5 py-4 rounded-md font-bold hover:bg-[#7fae61] text-lg"
+                className="block w-full text-center bg-primary text-white px-5 py-4 rounded-md font-bold hover:bg-primary-hover text-lg"
               >
                 {t("cta_visit")}
               </Link>
@@ -167,7 +163,7 @@ export default function Navbar() {
   );
 }
 
-// --- SUB-KOMPONENTEN ---
+// --- SUB-COMPONENTS ---
 
 function NavLink({
   href,
@@ -182,7 +178,7 @@ function NavLink({
     <Link
       href={href}
       className={`text-sm font-bold tracking-wide uppercase transition-colors whitespace-nowrap ${
-        active ? "text-[#93C572]" : "text-[#3B2F2F] hover:text-[#93C572]"
+        active ? "text-primary" : "text-foreground hover:text-primary"
       }`}
     >
       {children}
@@ -207,8 +203,8 @@ function MobileNavLink({
       onClick={onClick}
       className={`block px-3 py-3 rounded-md text-xl font-bold ${
         active
-          ? "bg-stone-100 text-[#93C572]"
-          : "text-[#3B2F2F] hover:bg-stone-50"
+          ? "bg-stone-100 text-primary"
+          : "text-foreground hover:bg-stone-50"
       }`}
     >
       {children}

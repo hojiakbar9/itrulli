@@ -48,10 +48,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${fraunces.variable} ${dmSans.variable}`}>
-      <body className="bg-background min-h-screen flex flex-col">
+      <body className=" min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
           <Navbar />
-          <main className="flex-grow">{children}</main>
+          <main className="grow">{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>
