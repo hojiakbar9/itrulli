@@ -152,6 +152,91 @@
       ]
     },
     "cta_route": "Ottieni indicazioni"
+  },
+  "Contact": {
+    "title": "Contatti",
+    "description": "Hai domande, suggerimenti o vuoi prenotare per un evento? Scrivici.",
+    "info_title": "Contatto Diretto",
+    "form": {
+      "name_label": "Il tuo Nome",
+      "email_label": "La tua Email",
+      "subject_label": "Oggetto",
+      "message_label": "Messaggio",
+      "submit_btn": "Invia Messaggio",
+      "sending": "Invio in corso...",
+      "success_title": "Grazie!",
+      "success_desc": "Abbiamo ricevuto il tuo messaggio e ti risponderemo presto."
+    },
+    "faq": {
+      "q1": "Offrite gelato vegano?",
+      "a1": "Sì! Tutti i nostri gusti alla frutta sono 100% vegani e senza lattosio.",
+      "q2": "Si può pagare con carta?",
+      "a2": "Sì, accettiamo tutte le carte comuni e pagamenti contactless."
+    }
+  },
+  "Careers": {
+    "title": "Lavora con Noi",
+    "description": "Cerchiamo persone appassionate pronte a regalare sorrisi e gelato. Entra nella nostra famiglia!",
+    "benefits_title": "Perché noi?",
+    "benefits": {
+      "1": { "title": "Stipendio Equo", "desc": "Paga sopra la media & mance." },
+      "2": { "title": "Flessibilità", "desc": "Orari adatti ai tuoi studi o alla tua vita." },
+      "3": { "title": "Team Fantastico", "desc": "Atmosfera familiare e ovviamente: Gelato gratis!" }
+    },
+    "jobs_title": "Posizioni Aperte",
+    "apply_btn": "Candidati ora",
+    "jobs": {
+      "service": {
+        "title": "Cameriere/a (m/f/d)",
+        "type": "Full Time / Part Time",
+        "desc": "Ami il contatto con le persone, ti piace servire ai tavoli e mantieni la calma anche nelle calde giornate estive."
+      },
+      "counter": {
+        "title": "Banconista (m/f/d)",
+        "type": "Minijob / Part Time",
+        "desc": "Sei il volto dietro al bancone. Crei le palline perfette e consigli i clienti nella scelta dei gusti."
+      },
+      "production": {
+        "title": "Gelatiere (m/f/d)",
+        "type": "Full Time",
+        "desc": "Hai esperienza nella produzione di gelato o vuoi imparare il mestiere da zero? Aiutaci a fare il miglior gelato della città."
+      }
+    },
+    "no_jobs_cta": "Candidatura spontanea"
+  },"Legal": {
+    "impressum": {
+      "title": "Impressum",
+      "h1": "Angaben gemäß § 5 TMG",
+      "company_name": "iTrulli Gelateria",
+      "owner": "Inhaber: Max Mustermann",
+      "address_street": "Hauptstraße 12",
+      "address_city": "35037 Marburg",
+      "contact_h": "Kontakt",
+      "phone": "Telefon: +49 6421 123456",
+      "email": "E-Mail: ciao@itrulli.de",
+      "tax_h": "Umsatzsteuer-ID",
+      "tax_id": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE123456789",
+      "dispute_h": "EU-Streitschlichtung",
+      "dispute_text": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/.",
+      "liability_h": "Haftung für Inhalte",
+      "liability_text": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich..."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "intro": "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:",
+      "rights_h": "Ihre Betroffenenrechte",
+      "rights_text": "Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:",
+      "rights_list": [
+        "Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung,",
+        "Berichtigung unrichtiger personenbezogener Daten,",
+        "Löschung Ihrer bei uns gespeicherten Daten,",
+        "Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen,",
+        "Widerspruch gegen die Verarbeitung Ihrer Daten bei uns und",
+        "Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben."
+      ],
+      "hosting_h": "Erfassung allgemeiner Informationen beim Besuch unserer Website",
+      "hosting_text": "Wenn Sie auf unsere Website zugreifen, werden automatisch mittels eines Cookies Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers und ähnliches."
+    }
   }
 
 }

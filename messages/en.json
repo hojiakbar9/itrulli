@@ -155,5 +155,90 @@
       ]
     },
     "cta_route": "Get Directions"
+  },
+  "Contact": {
+    "title": "Contact",
+    "description": "Do you have questions, suggestions, or want to book us for an event? Write to us.",
+    "info_title": "Direct Line",
+    "form": {
+      "name_label": "Your Name",
+      "email_label": "Your Email",
+      "subject_label": "Subject",
+      "message_label": "Message",
+      "submit_btn": "Send Message",
+      "sending": "Sending...",
+      "success_title": "Thank you!",
+      "success_desc": "We have received your message and will get back to you soon."
+    },
+    "faq": {
+      "q1": "Do you offer vegan ice cream?",
+      "a1": "Yes! All our fruit flavors are 100% vegan and lactose-free.",
+      "q2": "Do you accept card payments?",
+      "a2": "Yes, we accept all major cards and contactless payments."
+    }
+  },"Careers": {
+    "title": "Careers at iTrulli",
+    "description": "We are looking for passionate people to serve smiles and ice cream. Join our family!",
+    "benefits_title": "Why us?",
+    "benefits": {
+      "1": { "title": "Fair Pay", "desc": "Above-average pay & tips." },
+      "2": { "title": "Flexibility", "desc": "Working hours that fit your studies/life." },
+      "3": { "title": "Best Team", "desc": "Family atmosphere and of course: Free ice cream!" }
+    },
+    "jobs_title": "Open Positions",
+    "apply_btn": "Apply Now",
+    "jobs": {
+      "service": {
+        "title": "Service Staff (m/f/d)",
+        "type": "Full-time / Part-time",
+        "desc": "You love dealing with people, enjoy serving tables, and keep a cool head even on hot summer days."
+      },
+      "counter": {
+        "title": "Ice Cream Server (m/f/d)",
+        "type": "Minijob / Part-time",
+        "desc": "You are the face behind the counter. You scoop the perfect balls and advise our guests on flavor choices."
+      },
+      "production": {
+        "title": "Gelato Maker (m/f/d)",
+        "type": "Full-time",
+        "desc": "Do you have experience in ice cream making or want to learn the craft from scratch? Help us make the best ice cream in town."
+      }
+    },
+    "no_jobs_cta": "Send unsolicited application"
+  },
+  "Legal": {
+    "impressum": {
+      "title": "Impressum",
+      "h1": "Angaben gemäß § 5 TMG",
+      "company_name": "iTrulli Gelateria",
+      "owner": "Inhaber: Max Mustermann",
+      "address_street": "Hauptstraße 12",
+      "address_city": "35037 Marburg",
+      "contact_h": "Kontakt",
+      "phone": "Telefon: +49 6421 123456",
+      "email": "E-Mail: ciao@itrulli.de",
+      "tax_h": "Umsatzsteuer-ID",
+      "tax_id": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE123456789",
+      "dispute_h": "EU-Streitschlichtung",
+      "dispute_text": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/.",
+      "liability_h": "Haftung für Inhalte",
+      "liability_text": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich..."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "intro": "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:",
+      "rights_h": "Ihre Betroffenenrechte",
+      "rights_text": "Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:",
+      "rights_list": [
+        "Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung,",
+        "Berichtigung unrichtiger personenbezogener Daten,",
+        "Löschung Ihrer bei uns gespeicherten Daten,",
+        "Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen,",
+        "Widerspruch gegen die Verarbeitung Ihrer Daten bei uns und",
+        "Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben."
+      ],
+      "hosting_h": "Erfassung allgemeiner Informationen beim Besuch unserer Website",
+      "hosting_text": "Wenn Sie auf unsere Website zugreifen, werden automatisch mittels eines Cookies Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers und ähnliches."
+    }
   }
 }

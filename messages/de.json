@@ -157,5 +157,91 @@
       ]
     },
     "cta_route": "Route planen"
+  },
+  "Contact": {
+    "title": "Kontakt",
+    "description": "Haben Sie Fragen, Anregungen oder möchten Sie uns für ein Event buchen? Schreiben Sie uns.",
+    "info_title": "Direkter Draht",
+    "form": {
+      "name_label": "Ihr Name",
+      "email_label": "Ihre E-Mail",
+      "subject_label": "Betreff",
+      "message_label": "Nachricht",
+      "submit_btn": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "success_title": "Danke!",
+      "success_desc": "Wir haben Ihre Nachricht erhalten und melden uns bald."
+    },
+    "faq": {
+      "q1": "Bieten Sie veganes Eis an?",
+      "a1": "Ja! Alle unsere Fruchtsorten sind 100% vegan und laktosefrei.",
+      "q2": "Kann man mit Karte zahlen?",
+      "a2": "Ja, wir akzeptieren alle gängigen Karten und kontaktlose Zahlung."
+    }
+  },"Careers": {
+    "title": "Karriere bei iTrulli",
+    "description": "Wir suchen leidenschaftliche Menschen, die Lächeln und Eis verteilen. Werde Teil unserer Familie!",
+    "benefits_title": "Warum wir?",
+    "benefits": {
+      "1": { "title": "Faires Gehalt", "desc": "Überdurchschnittliche Bezahlung & Trinkgeld." },
+      "2": { "title": "Flexibilität", "desc": "Arbeitszeiten, die zu deinem Studium/Leben passen." },
+      "3": { "title": "Bestes Team", "desc": "Familiäre Atmosphäre und natürlich: Gratis Eis!" }
+    },
+    "jobs_title": "Offene Stellen",
+    "apply_btn": "Jetzt bewerben",
+    "jobs": {
+      "service": {
+        "title": "Servicekraft (m/w/d)",
+        "type": "Vollzeit / Teilzeit",
+        "desc": "Du liebst den Umgang mit Menschen, bedienst gerne an Tischen und behältst auch an heißen Sommertagen einen kühlen Kopf."
+      },
+      "counter": {
+        "title": "Eisverkäufer/in (m/w/d)",
+        "type": "Minijob / Aushilfe",
+        "desc": "Du bist das Gesicht hinter der Theke. Du zauberst die perfekten Kugeln und berätst unsere Gäste bei der Sortenwahl."
+      },
+      "production": {
+        "title": "Gelatiere / Eismacher (m/w/d)",
+        "type": "Vollzeit",
+        "desc": "Du hast Erfahrung in der Eisherstellung oder willst das Handwerk von Grund auf lernen? Hilf uns, das beste Eis der Stadt zu machen."
+      }
+    },
+    "no_jobs_cta": "Initiativbewerbung senden"
+  },
+  
+  "Legal": {
+    "impressum": {
+      "title": "Impressum",
+      "h1": "Angaben gemäß § 5 TMG",
+      "company_name": "iTrulli Gelateria",
+      "owner": "Inhaber: Max Mustermann",
+      "address_street": "Hauptstraße 12",
+      "address_city": "35037 Marburg",
+      "contact_h": "Kontakt",
+      "phone": "Telefon: +49 6421 123456",
+      "email": "E-Mail: ciao@itrulli.de",
+      "tax_h": "Umsatzsteuer-ID",
+      "tax_id": "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE123456789",
+      "dispute_h": "EU-Streitschlichtung",
+      "dispute_text": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/.",
+      "liability_h": "Haftung für Inhalte",
+      "liability_text": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich..."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "intro": "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:",
+      "rights_h": "Ihre Betroffenenrechte",
+      "rights_text": "Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:",
+      "rights_list": [
+        "Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung,",
+        "Berichtigung unrichtiger personenbezogener Daten,",
+        "Löschung Ihrer bei uns gespeicherten Daten,",
+        "Einschränkung der Datenverarbeitung, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen,",
+        "Widerspruch gegen die Verarbeitung Ihrer Daten bei uns und",
+        "Datenübertragbarkeit, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben."
+      ],
+      "hosting_h": "Erfassung allgemeiner Informationen beim Besuch unserer Website",
+      "hosting_text": "Wenn Sie auf unsere Website zugreifen, werden automatisch mittels eines Cookies Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers und ähnliches."
+    }
   }
 }
