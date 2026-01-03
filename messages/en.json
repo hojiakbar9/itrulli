@@ -39,5 +39,20 @@
         "desc": "Cream gelato with crunchy chocolate chips"
       }
     }
+  },
+  
+  "Story": {
+    "kicker": "Our Story",
+    "headline": "Tradition You Can Taste",
+    "p1": "It all started in 1985 in a small village in Sicily. Nonna Maria taught us that good gelato needs only three things: fresh milk, the best fruit, and lots of patience.",
+    "p2": "Today we continue this tradition in Germany. We use no ready-made mixes—every flavor is prepared fresh every morning in our lab behind the shop.",
+    "stat_1_label": "Founded",
+    "stat_1_value": "1985",
+    "stat_2_label": "Ingredients",
+    "stat_2_value": "100% Organic",
+    "stat_3_label": "Flavors",
+    "stat_3_value": "50+",
+    "cta": "Read more"
   }
+
 }
