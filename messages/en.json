@@ -1,7 +1,11 @@
 {
   "Navigation": {
+    "home": "Home",
     "menu": "Menu",
-    "about": "About Us",
-    "contact": "Contact"
+    "gallery": "Gallery",
+    "hours": "Opening Hours",
+    "contact": "Contact",
+    "careers": "Careers",
+    "cta_visit": "Visit Now"
   }
 }

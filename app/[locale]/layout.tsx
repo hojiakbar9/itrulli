@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
 import "./globals.css";
+import Navbar from "../componets/NavBar";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -47,9 +48,10 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${fraunces.variable} ${dmSans.variable}`}>
-      <body>
+      <body className="bg-background min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <Navbar />
+          <main className="flex-grow">{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>

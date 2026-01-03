@@ -1,7 +1,11 @@
 {
   "Navigation": {
+    "home": "Home",
     "menu": "Menu",
-    "about": "Chi Siamo",
-    "contact": "Contatti"
+    "gallery": "Galleria",
+    "hours": "Orari",
+    "contact": "Contatti",
+    "careers": "Lavora con noi",
+    "cta_visit": "Vieni a trovarci"
   }
 }

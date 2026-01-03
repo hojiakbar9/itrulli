@@ -1,7 +1,11 @@
 {
   "Navigation": {
+    "home": "Home",
     "menu": "Eiskarte",
-    "about": "Über uns",
-    "contact": "Kontakt"
+    "gallery": "Galerie",
+    "hours": "Öffnungszeiten",
+    "contact": "Kontakt",
+    "careers": "Karriere",
+    "cta_visit": "Jetzt Besuchen"
   }
 }
