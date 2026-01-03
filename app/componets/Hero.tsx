@@ -1,6 +1,4 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,8 +6,8 @@ interface HeroProps {
   locale: string;
 }
 
-export default function Hero({ locale }: HeroProps) {
-  const t = useTranslations("Hero");
+export default async function Hero({ locale }: HeroProps) {
+  const t = await getTranslations("Hero");
 
   return (
     <section className="bg-background w-full overflow-hidden">
