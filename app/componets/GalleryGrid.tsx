@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image"; // Uncomment when ready
 import { useTranslations } from "next-intl";
 
-// Mock Data - In reality, use your own file paths
+// Mock Data
 const IMAGES = [
   {
     id: 1,
@@ -78,7 +78,7 @@ export default function GalleryGrid() {
   return (
     <div>
       {/* Category Filter Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-up">
         {["all", "gelato", "shop", "process"].map((cat) => (
           <button
             key={cat}
@@ -95,12 +95,16 @@ export default function GalleryGrid() {
       </div>
 
       {/* Masonry Grid Layout */}
-      {/* columns-1 (mobile) -> columns-2 (tablet) -> columns-3 (desktop) */}
-      <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-        {filteredImages.map((image) => (
+      {/* KEY={FILTER} is the secret sauce. It forces React to re-render the block when filter changes, triggering the animations again. */}
+      <div
+        key={filter}
+        className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6"
+      >
+        {filteredImages.map((image, index) => (
           <div
             key={image.id}
-            className="break-inside-avoid group cursor-pointer"
+            className="break-inside-avoid group cursor-pointer animate-fade-up" // Add animation class
+            style={{ animationDelay: `${index * 100}ms` }} // Staggered delay based on index
             onClick={() => setSelectedImage(image)}
           >
             <div
@@ -123,9 +127,8 @@ export default function GalleryGrid() {
                 </svg>
               </div>
 
-              {/* Placeholder Div - Replace with <Image /> when files exist */}
+              {/* Placeholder Div */}
               <div className="w-full h-full bg-stone-200 flex items-center justify-center text-stone-400 font-bold">
-                {/* UNCOMMENT THIS LINE: */}
                 {/* <Image src={image.src} alt={image.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" /> */}
                 IMG: {image.category}
               </div>
@@ -137,16 +140,17 @@ export default function GalleryGrid() {
       {/* Lightbox Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in" // Simple fade for background
           onClick={() => setSelectedImage(null)}
         >
+          {/* Modal Content - animating Scale In */}
           <div
-            className="relative max-w-5xl w-full max-h-[90vh] rounded-lg overflow-hidden"
+            className="relative max-w-5xl w-full max-h-[90vh] rounded-lg overflow-hidden animate-fade-scale"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 text-white hover:text-primary z-50 p-2 bg-black/20 rounded-full"
+              className="absolute top-4 right-4 text-white hover:text-primary z-50 p-2 bg-black/20 rounded-full transition-colors"
             >
               <svg
                 className="w-8 h-8"
@@ -164,7 +168,6 @@ export default function GalleryGrid() {
             </button>
 
             <div className="relative w-full h-[80vh]">
-              {/* Placeholder - Replace with <Image /> */}
               <div className="w-full h-full bg-stone-800 flex items-center justify-center text-stone-500">
                 {/* <Image src={selectedImage.src} alt={selectedImage.alt} fill className="object-contain" /> */}
                 FULLSCREEN IMG
