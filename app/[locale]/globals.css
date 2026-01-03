@@ -25,3 +25,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
 }
+
+/* Custom Floating Animation */
+@keyframes float-smooth {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); box-shadow: 0 25px 15px 0px rgba(0,0,0,0.1); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float-smooth 6s ease-in-out infinite;
+}

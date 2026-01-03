@@ -7,5 +7,14 @@
     "contact": "Contact",
     "careers": "Careers",
     "cta_visit": "Visit Now"
+  },
+  "Hero": {
+    "kicker": "Since 1985",
+    "headline": "A Spoonful of <highlight>Happiness</highlight>",
+    "description": "Authentic Italian gelato, handmade daily in small batches using traditional techniques and organic ingredients.",
+    "cta_menu": "View Menu",
+    "cta_locations": "Locations",
+    "badge_title": "Flavor of the Month",
+    "badge_flavor": "Pistachio Bronte DOP"
   }
 }

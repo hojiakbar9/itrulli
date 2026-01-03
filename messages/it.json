@@ -7,5 +7,14 @@
     "contact": "Contatti",
     "careers": "Lavora con noi",
     "cta_visit": "Vieni a trovarci"
+  },
+  "Hero": {
+    "kicker": "Dal 1985",
+    "headline": "Un Cucchiaio di <highlight>Felicità</highlight>",
+    "description": "Autentico gelato italiano, fatto a mano ogni giorno in piccoli lotti con tecniche tradizionali e ingredienti biologici.",
+    "cta_menu": "Vedi Menu",
+    "cta_locations": "Dove Siamo",
+    "badge_title": "Gusto del Mese",
+    "badge_flavor": "Pistacchio Bronte DOP"
   }
 }

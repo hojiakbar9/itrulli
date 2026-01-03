@@ -7,5 +7,14 @@
     "contact": "Kontakt",
     "careers": "Karriere",
     "cta_visit": "Jetzt Besuchen"
+  },
+  "Hero": {
+    "kicker": "Seit 1985",
+    "headline": "Ein Löffel <highlight>Glück</highlight>",
+    "description": "Authentisches italienisches Eis, täglich frisch in kleinen Chargen handgefertigt mit traditionellen Techniken und Bio-Zutaten.",
+    "cta_menu": "Menü ansehen",
+    "cta_locations": "Standorte",
+    "badge_title": "Eis des Monats",
+    "badge_flavor": "Pistazie Bronte DOP"
   }
 }
