@@ -77,6 +77,18 @@
       }
     },
     "cta_google": "Read all reviews on Google"
+  },"Footer": {
+    "brand_slogan": "True Italian Craftsmanship.",
+    "col_links": "Explore",
+    "col_contact": "Contact & Hours",
+    "address": "Hauptstraße 12, 35037 Marburg",
+    "phone": "+49 6421 123456",
+    "hours_label": "Open Daily:",
+    "hours_value": "11:00 AM - 10:00 PM",
+    "legal_imprint": "Imprint",
+    "legal_privacy": "Privacy Policy",
+    "legal_cookie": "Cookie Settings",
+    "copyright": "All rights reserved."
   }
 
 }

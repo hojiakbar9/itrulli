@@ -75,6 +75,18 @@
       }
     },
     "cta_google": "Leggi tutte le recensioni su Google"
+  },"Footer": {
+    "brand_slogan": "Vero artigianato italiano.",
+    "col_links": "Esplora",
+    "col_contact": "Contatti & Orari",
+    "address": "Hauptstraße 12, 35037 Marburg",
+    "phone": "+49 6421 123456",
+    "hours_label": "Aperti tutti i giorni:",
+    "hours_value": "11:00 - 22:00",
+    "legal_imprint": "Impressum",
+    "legal_privacy": "Privacy",
+    "legal_cookie": "Impostazioni Cookie",
+    "copyright": "Tutti i diritti riservati."
   }
 
 }

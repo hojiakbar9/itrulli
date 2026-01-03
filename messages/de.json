@@ -77,6 +77,19 @@
       }
     },
     "cta_google": "Alle Bewertungen auf Google lesen"
+  },
+  "Footer": {
+    "brand_slogan": "Echtes italienisches Handwerk.",
+    "col_links": "Entdecken",
+    "col_contact": "Kontakt & Öffnungszeiten",
+    "address": "Hauptstraße 12, 35037 Marburg",
+    "phone": "+49 6421 123456",
+    "hours_label": "Täglich geöffnet:",
+    "hours_value": "11:00 - 22:00 Uhr",
+    "legal_imprint": "Impressum",
+    "legal_privacy": "Datenschutz",
+    "legal_cookie": "Cookie-Einstellungen",
+    "copyright": "Alle Rechte vorbehalten."
   }
 
 }

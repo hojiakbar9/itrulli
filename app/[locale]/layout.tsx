@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "../../i18n/routing";
 import "./globals.css";
 import Navbar from "../componets/NavBar";
+import Footer from "../componets/Footer";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -52,6 +53,8 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <main className="grow">{children}</main>
+
+          <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>
