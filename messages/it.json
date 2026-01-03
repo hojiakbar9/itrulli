@@ -87,6 +87,71 @@
     "legal_privacy": "Privacy",
     "legal_cookie": "Impostazioni Cookie",
     "copyright": "Tutti i diritti riservati."
+  },  "Menu": {
+    "title": "Il Nostro Menu Gelati",
+    "description": "Gelato artigianale, frutta fresca e ingredienti di altissima qualità. Tutti i gusti alla frutta sono 100% vegani.",
+    "allergens_label": "Allergeni & Additivi",
+    "sections": {
+      "milk": "Gelati alla Crema",
+      "fruit": "Gelati alla Frutta (Vegani)",
+      "sundaes": "Coppe Gelato"
+    },
+    "prices": {
+      "scoop_1": "1 Pallina",
+      "scoop_2": "2 Palline",
+      "scoop_3": "3 Palline",
+      "cream": "Panna Montata",
+      "value_1": "1,80 €",
+      "value_2": "3,40 €",
+      "value_3": "4,80 €",
+      "value_cream": "1,20 €"
+    },
+    "items": {
+      "vanilla": { "name": "Vaniglia del Madagascar", "desc": "Con vera vaniglia Bourbon" },
+      "chocolate": { "name": "Cioccolato Fondente", "desc": "70% di cacao" },
+      "pistachio": { "name": "Pistacchio di Bronte", "desc": "Pistacchi siciliani (DOP)" },
+      "hazelnut": { "name": "Nocciola", "desc": "Nocciole del Piemonte" },
+      "stracciatella": { "name": "Stracciatella", "desc": "Con scaglie croccanti di cioccolato" },
+      "strawberry": { "name": "Fragola", "desc": "Fragole fresche, di stagione" },
+      "lemon": { "name": "Limone", "desc": "Limoni di Amalfi" },
+      "mango": { "name": "Mango", "desc": "Mango Alphonso" },
+      "spaghetti": { "name": "Spaghetti al Gelato", "desc": "Gelato alla vaniglia, salsa di fragole, cioccolato bianco" },
+      "tartufo": { "name": "Tartufo Nero", "desc": "Gelato al cioccolato e nocciola con copertura al cacao" }
+    }
+  },
+  "Gallery": {
+    "title": "La Nostra Galleria",
+    "description": "Uno sguardo nel nostro mondo: dalla preparazione al piacere perfetto.",
+    "categories": {
+      "all": "Tutti",
+      "gelato": "Gelato",
+      "shop": "Ambiente",
+      "process": "Artigianato"
+    }
+  }, "Hours": {
+    "title": "Le Nostre Sedi",
+    "description": "Nel centro di Marburg o a Cölbe – vi aspettiamo.",
+    "marburg": {
+      "city": "Marburg",
+      "address": "Hauptstraße 12, 35037 Marburg",
+      "phone": "+49 6421 123456",
+      "schedule_label": "Orari di apertura:",
+      "schedule": [
+        { "days": "Lunedì - Sabato", "time": "11:00 - 21:00" },
+        { "days": "Domenica e Festivi", "time": "12:00 - 21:00" }
+      ]
+    },
+    "coelbe": {
+      "city": "Cölbe",
+      "address": "Lahnstraße 5, 35091 Cölbe",
+      "phone": "+49 6421 987654",
+      "schedule_label": "Orari di apertura:",
+      "schedule": [
+        { "days": "Martedì - Domenica", "time": "12:00 - 20:00" },
+        { "days": "Lunedì", "time": "Chiuso" }
+      ]
+    },
+    "cta_route": "Ottieni indicazioni"
   }
 
 }

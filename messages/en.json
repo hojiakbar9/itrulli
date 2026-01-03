@@ -89,6 +89,71 @@
     "legal_privacy": "Privacy Policy",
     "legal_cookie": "Cookie Settings",
     "copyright": "All rights reserved."
+  },
+  "Menu": {
+    "title": "Our Ice Cream Menu",
+    "description": "Handcrafted gelato, fresh fruits, and the finest ingredients. All fruit flavors are 100% vegan.",
+    "allergens_label": "Allergens & Additives",
+    "sections": {
+      "milk": "Milk-Based Ice Cream",
+      "fruit": "Fruit Sorbet (Vegan)",
+      "sundaes": "Ice Cream Sundaes"
+    },
+    "prices": {
+      "scoop_1": "1 Scoop",
+      "scoop_2": "2 Scoops",
+      "scoop_3": "3 Scoops",
+      "cream": "Whipped Cream Portion",
+      "value_1": "€1.80",
+      "value_2": "€3.40",
+      "value_3": "€4.80",
+      "value_cream": "€1.20"
+    },
+    "items": {
+      "vanilla": { "name": "Madagascar Vanilla", "desc": "Made with real Bourbon vanilla" },
+      "chocolate": { "name": "Dark Chocolate", "desc": "70% cocoa content" },
+      "pistachio": { "name": "Bronte Pistachio", "desc": "Sicilian pistachios (PDO)" },
+      "hazelnut": { "name": "Hazelnut", "desc": "Piedmont hazelnuts" },
+      "stracciatella": { "name": "Stracciatella", "desc": "With crunchy chocolate pieces" },
+      "strawberry": { "name": "Strawberry", "desc": "Fresh strawberries, seasonal" },
+      "lemon": { "name": "Lemon", "desc": "Amalfi lemons" },
+      "mango": { "name": "Mango", "desc": "Alphonso mango" },
+      "spaghetti": { "name": "Spaghetti Ice Cream", "desc": "Vanilla ice cream, strawberry sauce, white chocolate" },
+      "tartufo": { "name": "Tartufo Nero", "desc": "Chocolate & hazelnut ice cream with cocoa coating" }
+    }
+  },
+  "Gallery": {
+    "title": "Our Gallery",
+    "description": "A glimpse into our world: From preparation to perfect enjoyment.",
+    "categories": {
+      "all": "All",
+      "gelato": "Gelato",
+      "shop": "Atmosphere",
+      "process": "Craft"
+    }
+  }, "Hours": {
+    "title": "Our Locations",
+    "description": "Whether in Marburg city center or Cölbe – we look forward to your visit.",
+    "marburg": {
+      "city": "Marburg",
+      "address": "Hauptstraße 12, 35037 Marburg",
+      "phone": "+49 6421 123456",
+      "schedule_label": "Opening Hours:",
+      "schedule": [
+        { "days": "Monday - Saturday", "time": "11:00 AM - 9:00 PM" },
+        { "days": "Sunday & Holidays", "time": "12:00 PM - 9:00 PM" }
+      ]
+    },
+    "coelbe": {
+      "city": "Cölbe",
+      "address": "Lahnstraße 5, 35091 Cölbe",
+      "phone": "+49 6421 987654",
+      "schedule_label": "Opening Hours:",
+      "schedule": [
+        { "days": "Tuesday - Sunday", "time": "12:00 PM - 8:00 PM" },
+        { "days": "Monday", "time": "Closed" }
+      ]
+    },
+    "cta_route": "Get Directions"
   }
-
 }

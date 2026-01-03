@@ -90,6 +90,72 @@
     "legal_privacy": "Datenschutz",
     "legal_cookie": "Cookie-Einstellungen",
     "copyright": "Alle Rechte vorbehalten."
+  },
+  
+  "Menu": {
+    "title": "Unsere Eiskarte",
+    "description": "Handgemachtes Gelato, frische Früchte und beste Zutaten. Alle Fruchtsorten sind 100% vegan.",
+    "allergens_label": "Allergene & Zusatzstoffe",
+    "sections": {
+      "milk": "Milchspeiseeis",
+      "fruit": "Fruchteis (Vegan)",
+      "sundaes": "Eisbecher"
+    },
+    "prices": {
+      "scoop_1": "1 Kugel",
+      "scoop_2": "2 Kugeln",
+      "scoop_3": "3 Kugeln",
+      "cream": "Portion Sahne",
+      "value_1": "1,80 €",
+      "value_2": "3,40 €",
+      "value_3": "4,80 €",
+      "value_cream": "1,20 €"
+    },
+    "items": {
+      "vanilla": { "name": "Madagaskar Vanille", "desc": "Mit echter Bourbon Vanille" },
+      "chocolate": { "name": "Dunkle Schokolade", "desc": "70% Kakaoanteil" },
+      "pistachio": { "name": "Pistazie Bronte", "desc": "Sizilianische Pistazien (DOP)" },
+      "hazelnut": { "name": "Haselnuss", "desc": "Piemonteser Haselnüsse" },
+      "stracciatella": { "name": "Stracciatella", "desc": "Mit knackigen Schokostücken" },
+      "strawberry": { "name": "Erdbeere", "desc": "Frische Erdbeeren, Saison" },
+      "lemon": { "name": "Zitrone", "desc": "Amalfi Zitronen" },
+      "mango": { "name": "Mango", "desc": "Alphonso Mango" },
+      "spaghetti": { "name": "Spaghetti Eis", "desc": "Vanilleeis, Erdbeersauce, weiße Schokolade" },
+      "tartufo": { "name": "Tartufo Nero", "desc": "Schoko- & Haselnusseis, Kakaomantel" }
+    }
+  },
+  "Gallery": {
+    "title": "Unsere Galerie",
+    "description": "Ein Einblick in unsere Welt: Von der Zubereitung bis zum perfekten Genuss.",
+    "categories": {
+      "all": "Alle",
+      "gelato": "Gelato",
+      "shop": "Ambiente",
+      "process": "Handwerk"
+    }
+  }, "Hours": {
+    "title": "Unsere Standorte",
+    "description": "Ob in der Marburger Oberstadt oder in Cölbe – wir freuen uns auf Ihren Besuch.",
+    "marburg": {
+      "city": "Marburg",
+      "address": "Hauptstraße 12, 35037 Marburg",
+      "phone": "+49 6421 123456",
+      "schedule_label": "Öffnungszeiten:",
+      "schedule": [
+        { "days": "Montag - Samstag", "time": "11:00 - 21:00 Uhr" },
+        { "days": "Sonntag & Feiertage", "time": "12:00 - 21:00 Uhr" }
+      ]
+    },
+    "coelbe": {
+      "city": "Cölbe",
+      "address": "Lahnstraße 5, 35091 Cölbe",
+      "phone": "+49 6421 987654",
+      "schedule_label": "Öffnungszeiten:",
+      "schedule": [
+        { "days": "Dienstag - Sonntag", "time": "12:00 - 20:00 Uhr" },
+        { "days": "Montag", "time": "Ruhetag" }
+      ]
+    },
+    "cta_route": "Route planen"
   }
-
 }
