@@ -75,10 +75,6 @@ export default async function HoursPage({ params }: HoursProps) {
                   days: t("coelbe.schedule.0.days"),
                   time: t("coelbe.schedule.0.time"),
                 },
-                {
-                  days: t("coelbe.schedule.1.days"),
-                  time: t("coelbe.schedule.1.time"),
-                },
               ]}
               cta={t("cta_route")}
               mapLink={getMapLink("Lahnstraße 5, 35091 Cölbe")}

@@ -152,7 +152,7 @@
       "phone": "+49 152 34139020",
       "schedule_label": "Öffnungszeiten:",
       "schedule":  [
-        { "days": "Montag - Freitag", "time": "09:00 - 19:00 Uhr" },
+        { "days": "Montag - Sonntag", "time": "10:00 - 19:00 Uhr" },
         { "days": "Samsatg", "time": "09:00 - 18:00 Uhr" }
       ]
     },
