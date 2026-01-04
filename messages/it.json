@@ -59,19 +59,19 @@
     "description": "Amiamo vedervi felici. Ecco alcune opinioni dalla nostra community.",
     "reviews": {
       "r1": {
-        "text": "Il miglior pistacchio che abbia mai mangiato fuori dall'Italia. Incredibilmente cremoso!",
-        "author": "Julia Müller",
-        "date": "2 settimane fa"
+        "text": "Personale super gentile, multilingue e molto disponibile! Inoltre, i prezzi non sono esagerati, il che è un bel bonus.",
+        "author": "Emma Kerkhey",
+        "date": "5 mese fa"
       },
       "r2": {
-        "text": "Finalmente una gelateria che usa veri ingredienti biologici. La differenza si sente.",
-        "author": "Thomas Weber",
+        "text": "Gelateria davvero bellissima, atmosfera rilassata, gelato super delizioso e servizio estremamente cordiale. Tornerò sicuramente.",
+        "author": "Ayscha Nasra",
         "date": "1 mese fa"
       },
       "r3": {
-        "text": "Espresso perfetto e personale gentilissimo. Un piccolo angolo di vacanza.",
-        "author": "Marco Rossi",
-        "date": "Ieri"
+        "text": "Gelato super delizioso e personale davvero gentile. Sempre volentieri 💗",
+        "author": "Veronikaa",
+        "date": "1 mese fa"
       }
     },
     "cta_google": "Leggi tutte le recensioni su Google"
