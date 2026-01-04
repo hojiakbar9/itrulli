@@ -136,8 +136,8 @@
     "description": "Whether in Marburg city center or Cölbe – we look forward to your visit.",
     "marburg": {
       "city": "Marburg",
-      "address": "Hauptstraße 12, 35037 Marburg",
-      "phone": "+49 6421 123456",
+      "address": "Universitätstraße 15, 35037 Marburg",
+      "phone": "+49 152 34139020",
       "schedule_label": "Opening Hours:",
       "schedule": [
         { "days": "Monday - Friday", "time": "9:00 AM - 7:00 PM" },
@@ -146,8 +146,8 @@
     },
     "coelbe": {
       "city": "Cölbe",
-      "address": "Lahnstraße 5, 35091 Cölbe",
-      "phone": "+49 6421 987654",
+      "address": "Kasselstraße 5, 35091 Cölbe",
+      "phone": "+49 152 34139020",
       "schedule_label": "Opening Hours:",
       "schedule": [
         { "days": "Monday - Friday", "time": "9:00 AM - 7:00 PM" },
