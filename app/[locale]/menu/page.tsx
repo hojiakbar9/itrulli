@@ -11,13 +11,23 @@ export const metadata: Metadata = {
 interface MenuProps {
   params: Promise<{ locale: string }>;
 }
+interface MenuItem {
+  id: string;
+  allergens: string[];
+  price?: string;
+}
+
+interface MenuSection {
+  id: string;
+  items: MenuItem[];
+}
 
 export default async function MenuPage({ params }: MenuProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Menu" });
 
   // Mock Data Structure
-  const MENU_SECTIONS = [
+  const MENU_SECTIONS: MenuSection[] = [
     {
       id: "milk",
       items: [
@@ -142,8 +152,6 @@ export default async function MenuPage({ params }: MenuProps) {
                       </div>
 
                       <div className="text-right">
-                        {/* Price (if specific to item, mostly for sundaes) */}
-                        {/* @ts-expect-error - dynamic check */}
                         {item.price && (
                           <span className="block font-bold text-primary">
                             {item.price}
