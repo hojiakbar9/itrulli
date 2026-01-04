@@ -140,8 +140,8 @@
       "phone": "+49 6421 123456",
       "schedule_label": "Opening Hours:",
       "schedule": [
-        { "days": "Monday - Saturday", "time": "11:00 AM - 9:00 PM" },
-        { "days": "Sunday & Holidays", "time": "12:00 PM - 9:00 PM" }
+        { "days": "Monday - Friday", "time": "9:00 AM - 7:00 PM" },
+        { "days": "Saturday", "time": "9:00 PM - 6:00 PM" }
       ]
     },
     "coelbe": {
@@ -150,8 +150,8 @@
       "phone": "+49 6421 987654",
       "schedule_label": "Opening Hours:",
       "schedule": [
-        { "days": "Tuesday - Sunday", "time": "12:00 PM - 8:00 PM" },
-        { "days": "Monday", "time": "Closed" }
+        { "days": "Monday - Friday", "time": "9:00 AM - 7:00 PM" },
+        { "days": "Saturday", "time": "9:00 PM - 6:00 PM" }
       ]
     },
     "cta_route": "Get Directions"

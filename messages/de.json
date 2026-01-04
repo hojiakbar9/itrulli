@@ -142,8 +142,8 @@
       "phone": "+49 6421 123456",
       "schedule_label": "Öffnungszeiten:",
       "schedule": [
-        { "days": "Montag - Samstag", "time": "11:00 - 21:00 Uhr" },
-        { "days": "Sonntag & Feiertage", "time": "12:00 - 21:00 Uhr" }
+        { "days": "Montag - Freitag", "time": "09:00 - 19:00 Uhr" },
+        { "days": "Samsatg", "time": "09:00 - 18:00 Uhr" }
       ]
     },
     "coelbe": {
@@ -151,9 +151,9 @@
       "address": "Lahnstraße 5, 35091 Cölbe",
       "phone": "+49 6421 987654",
       "schedule_label": "Öffnungszeiten:",
-      "schedule": [
-        { "days": "Dienstag - Sonntag", "time": "12:00 - 20:00 Uhr" },
-        { "days": "Montag", "time": "Ruhetag" }
+      "schedule":  [
+        { "days": "Montag - Freitag", "time": "09:00 - 19:00 Uhr" },
+        { "days": "Samsatg", "time": "09:00 - 18:00 Uhr" }
       ]
     },
     "cta_route": "Route planen"
