@@ -79,10 +79,10 @@
     "brand_slogan": "Vero artigianato italiano.",
     "col_links": "Esplora",
     "col_contact": "Contatti & Orari",
-    "address": "Hauptstraße 12, 35037 Marburg",
-    "phone": "+49 6421 123456",
-    "hours_label": "Aperti tutti i giorni:",
-    "hours_value": "11:00 - 22:00",
+    "address": "Universitätstraße 15, 35037 Marburg",
+    "phone": "+49 152 34139020",
+    "hours_label": "Lunedì - Venerdì:",
+    "hours_value": "09:00 - 19:00",
     "legal_imprint": "Impressum",
     "legal_privacy": "Privacy",
     "legal_cookie": "Impostazioni Cookie",
@@ -143,7 +143,7 @@
     },
     "coelbe": {
       "city": "Cölbe",
-      "address": "Kasselstraße 5, 35091 Cölbe",
+      "address": "Kasselerstraße 5, 35091 Cölbe",
       "phone": "+49 152 34139020",
       "schedule_label": "Orari di apertura:",
       "schedule": [

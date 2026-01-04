@@ -82,10 +82,10 @@
     "brand_slogan": "Echtes italienisches Handwerk.",
     "col_links": "Entdecken",
     "col_contact": "Kontakt & Öffnungszeiten",
-    "address": "Hauptstraße 12, 35037 Marburg",
-    "phone": "+49 6421 123456",
-    "hours_label": "Täglich geöffnet:",
-    "hours_value": "11:00 - 22:00 Uhr",
+    "address": "Universitätstraße 15, 35037 Marburg",
+    "phone": "+49 152 34139020",
+    "hours_label": "Montag - Freitag:",
+    "hours_value": "09:00 - 19:00 Uhr",
     "legal_imprint": "Impressum",
     "legal_privacy": "Datenschutz",
     "legal_cookie": "Cookie-Einstellungen",
@@ -148,7 +148,7 @@
     },
     "coelbe": {
       "city": "Cölbe",
-      "address": "Kasselstraße 5, 35091 Cölbe",
+      "address": "Kasselerstraße 5, 35091 Cölbe",
       "phone": "+49 152 34139020",
       "schedule_label": "Öffnungszeiten:",
       "schedule":  [
