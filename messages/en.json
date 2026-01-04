@@ -58,26 +58,14 @@
   "Testimonials": {
     "kicker": "Guestbook",
     "headline": "What our guests say",
-    "description": "We love seeing you happy. Here are a few words from our community.",
-    "reviews": {
-      "r1": {
-        "text": "Super nice staff, multilingual and very helpful! The prices are also not bank breaking as a bonus",
-        "author": "Emma Kerkhey",
-        "date": "5 months ago"
-      },
-      "r2": {
-        "text": "Really lovely ice cream shop, relaxed atmosphere, super delicious ice cream, and incredibly friendly service. I'll definitely be back.",
-        "author": "Ayscha Nasra",
-        "date": "1 month ago"
-      },
-      "r3": {
-        "text": "Super delicious ice cream and incredibly friendly staff. Happy to come back anytime 💗",
-        "author": "Veronikaa",
-        "date": "1 month ago"
-      }
-    },
-    "cta_google": "Read all reviews on Google"
-  },"Footer": {
+    "description": "Your opinion matters to us! Thank you for the great feedback.",
+    "rating_score": "4.0",
+    "rating_max": "/ 5",
+    "rating_text": "based on over 200 Google Reviews",
+    "cta_google": "Read all reviews on Google",
+    "disclaimer": "(External link to Google Maps)"
+  }
+  ,"Footer": {
     "brand_slogan": "True Italian Craftsmanship.",
     "col_links": "Explore",
     "col_contact": "Contact & Hours",

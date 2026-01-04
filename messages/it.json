@@ -56,25 +56,12 @@
   "Testimonials": {
     "kicker": "Dicono di noi",
     "headline": "Le parole dei nostri ospiti",
-    "description": "Amiamo vedervi felici. Ecco alcune opinioni dalla nostra community.",
-    "reviews": {
-      "r1": {
-        "text": "Personale super gentile, multilingue e molto disponibile! Inoltre, i prezzi non sono esagerati, il che è un bel bonus.",
-        "author": "Emma Kerkhey",
-        "date": "5 mese fa"
-      },
-      "r2": {
-        "text": "Gelateria davvero bellissima, atmosfera rilassata, gelato super delizioso e servizio estremamente cordiale. Tornerò sicuramente.",
-        "author": "Ayscha Nasra",
-        "date": "1 mese fa"
-      },
-      "r3": {
-        "text": "Gelato super delizioso e personale davvero gentile. Sempre volentieri 💗",
-        "author": "Veronikaa",
-        "date": "1 mese fa"
-      }
-    },
-    "cta_google": "Leggi tutte le recensioni su Google"
+    "description": "La vostra opinione conta! Grazie per il fantastico feedback.",
+    "rating_score": "4,0",
+    "rating_max": "/ 5",
+    "rating_text": "basato su oltre 200 recensioni Google",
+    "cta_google": "Leggi tutte le recensioni su Google",
+    "disclaimer": "(Link esterno a Google Maps)"
   },"Footer": {
     "brand_slogan": "Vero artigianato italiano.",
     "col_links": "Esplora",

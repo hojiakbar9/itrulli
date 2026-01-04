@@ -55,28 +55,15 @@
     "cta": "Mehr über uns"
   },
   
-  "Testimonials": {
+ "Testimonials": {
     "kicker": "Gästebuch",
     "headline": "Das sagen unsere Gäste",
-    "description": "Wir lieben es, euch glücklich zu sehen. Hier sind einige Stimmen aus unserer Community.",
-    "reviews": {
-      "r1": {
-        "text": "Super lecker, tolle Auswahl und immer frisch! Der Service ist schnell und sehr freundlich, man fühlt sich sofort willkommen. Es ist sauber, gemütlich und perfekt für eine kleine Pause.",
-        "author": "Emine S.N",
-        "date": "Vor 1 Monat"
-      },
-      "r2": {
-        "text": "Richtig schöne Eisdiele, entspannte Atmosphäre, superleckeres Eis und mega freundlicher Service. Komme auf jeden Fall wieder",
-        "author": "Ayscha Nasra",
-        "date": "Vor 1 Monat"
-      },
-      "r3": {
-        "text": "Super leckeres Eis und total freundliches Personal. Gerne immer wieder💗",
-        "author": "Veronikaa",
-        "date": "Vor 1 Monat"
-      }
-    },
-    "cta_google": "Alle Bewertungen auf Google lesen"
+    "description": "Eure Meinung ist uns wichtig! Vielen Dank für das tolle Feedback.",
+    "rating_score": "4,0",
+    "rating_max": "/ 5",
+    "rating_text": "basierend auf über 200 Google Bewertungen",
+    "cta_google": "Alle Bewertungen auf Google lesen",
+    "disclaimer": "(Externer Link zu Google Maps)"
   },
   "Footer": {
     "brand_slogan": "Echtes italienisches Handwerk.",
