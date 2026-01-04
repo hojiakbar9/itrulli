@@ -70,7 +70,7 @@ export default async function ContactPage({ params }: ContactProps) {
                         Adresse
                       </span>
                       <span className="text-muted-foreground">
-                        Hauptstraße 12, 35037 Marburg
+                        Universitätstraße 15, 35037 Marburg
                       </span>
                     </div>
                   </li>
@@ -95,10 +95,10 @@ export default async function ContactPage({ params }: ContactProps) {
                         Telefon
                       </span>
                       <a
-                        href="tel:+496421123456"
+                        href="tel:+4915234139020"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        +49 6421 123456
+                        +49 152 34139020
                       </a>
                     </div>
                   </li>
@@ -123,10 +123,10 @@ export default async function ContactPage({ params }: ContactProps) {
                         E-Mail
                       </span>
                       <a
-                        href="mailto:ciao@itrulli.de"
+                        href="mailto:infoitrulli@web.de"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        ciao@itrulli.de
+                        infoitrulli@web.de
                       </a>
                     </div>
                   </li>
