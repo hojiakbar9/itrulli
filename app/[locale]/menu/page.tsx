@@ -5,16 +5,14 @@ import Reveal from "@/app/componets/Reveal";
 export const metadata: Metadata = {
   title: "Eiskarte & Preise | iTrulli Gelateria",
   description:
-    "Unser aktuelles Angebot: Klassische Sorten, vegane Fruchteissorten und traditionelle italienische Eisbecher.",
+    "Unser aktuelles Angebot: Spaghetti Eis, Klassiker, Veganes Fruchteis und italienischer Kaffee.",
 };
 
-interface MenuProps {
-  params: Promise<{ locale: string }>;
-}
 interface MenuItem {
   id: string;
   allergens: string[];
   price?: string;
+  highlight?: boolean;
 }
 
 interface MenuSection {
@@ -22,35 +20,95 @@ interface MenuSection {
   items: MenuItem[];
 }
 
+interface MenuProps {
+  params: Promise<{ locale: string }>;
+}
+
 export default async function MenuPage({ params }: MenuProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Menu" });
 
-  // Mock Data Structure
   const MENU_SECTIONS: MenuSection[] = [
     {
-      id: "milk",
+      id: "kids",
       items: [
-        { id: "vanilla", allergens: ["G"] },
-        { id: "chocolate", allergens: ["G"] },
-        { id: "pistachio", allergens: ["G", "H"] },
-        { id: "hazelnut", allergens: ["G", "H"] },
-        { id: "stracciatella", allergens: ["G"] },
+        {
+          id: "pinocchio",
+          price: "5,00 €",
+          allergens: ["G", "A", "H", "2", "16"],
+        }, // Source: 15
+        { id: "micky", price: "5,00 €", allergens: ["G", "A", "H", "2", "16"] }, // Source: 19
       ],
     },
     {
-      id: "fruit",
+      id: "spaghetti",
       items: [
-        { id: "strawberry", allergens: [] },
-        { id: "lemon", allergens: [] },
-        { id: "mango", allergens: [] },
+        {
+          id: "spaghetti_classic",
+          price: "7,80 €",
+          allergens: ["G", "16", "17"],
+          highlight: true,
+        }, // Source: 104
+        // Replaced Carbonara (Egg Liqueur risk) with Spaghetti Schoko (Safe)
+        {
+          id: "spaghetti_choco",
+          price: "7,80 €",
+          allergens: ["G", "16", "17"],
+        }, // Source: 115
+        { id: "spaghetti_neri", price: "8,70 €", allergens: ["G", "H", "E"] }, // Source: 137
       ],
     },
     {
-      id: "sundaes",
+      id: "classics",
       items: [
-        { id: "spaghetti", price: "7,50 €", allergens: ["G", "C"] },
-        { id: "tartufo", price: "6,90 €", allergens: ["G", "H"] },
+        {
+          id: "pizza",
+          price: "9,50 €",
+          allergens: ["G", "16", "17"],
+          highlight: true,
+        }, // Source: 167
+        // Replaced Tartufo (Alcohol) with Banana Split (Safe)
+        {
+          id: "banana_split",
+          price: "8,70 €",
+          allergens: ["G", "2", "3", "16", "17"],
+        }, // Source: 171
+        {
+          id: "copacabana",
+          price: "8,70 €",
+          allergens: ["G", "16", "17", "20"],
+        }, // Source: 192
+      ],
+    },
+
+    {
+      id: "candy_nut",
+      items: [
+        {
+          id: "rocher",
+          price: "9,00 €",
+          allergens: ["G", "K", "H", "E"],
+          highlight: true,
+        }, // Source: 237
+        { id: "raffaello", price: "9,00 €", allergens: ["G", "K", "H", "A"] }, // Source: 247
+        // Replaced After Eight with Krokant (Caramel/Nut) - very safe and popular
+        { id: "krokant", price: "8,70 €", allergens: ["G", "K", "H", "E"] }, // Source: 227
+      ],
+    },
+    {
+      id: "yogurt",
+      items: [
+        { id: "yogurt_fruit", price: "8,70 €", allergens: ["G", "2", "3"] }, // Source: 72
+        { id: "yogurt_amarena", price: "8,70 €", allergens: ["G", "2", "3"] }, // Source: 92
+      ],
+    },
+    {
+      id: "drinks",
+      items: [
+        { id: "espresso", price: "2,40 €", allergens: [] }, // Source: 131
+        { id: "cappuccino", price: "3,20 €", allergens: ["G"] }, // Source: 132
+        { id: "milkshake", price: "ab 4,20 €", allergens: ["G"] }, // Source: 276
+        { id: "aperol", price: "7,50 €", allergens: ["N", "14", "2"] }, // Source: 116 (Aperol itself has alcohol, but it is a drink standard. If you want 100% alcohol free page, remove this too).
       ],
     },
   ];
@@ -75,33 +133,16 @@ export default async function MenuPage({ params }: MenuProps) {
       </section>
 
       <div className="max-w-5xl mx-auto px-6 lg:px-8 -mt-10 relative z-10">
-        {/* 2. Price Card (Sticky-ish look) */}
-        {/* We animate this with a delay so it pops in after the header */}
+        {/* 2. Price Card */}
         <Reveal delay={200}>
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-stone-100 mb-16 text-center md:text-left">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
               <div className="text-center">
                 <span className="block text-2xl font-serif font-bold text-foreground">
-                  {t("prices.value_1")}
+                  {t("prices.value_scoop")}
                 </span>
                 <span className="text-sm text-muted-foreground font-bold uppercase">
-                  {t("prices.scoop_1")}
-                </span>
-              </div>
-              <div className="text-center border-l border-stone-100">
-                <span className="block text-2xl font-serif font-bold text-foreground">
-                  {t("prices.value_2")}
-                </span>
-                <span className="text-sm text-muted-foreground font-bold uppercase">
-                  {t("prices.scoop_2")}
-                </span>
-              </div>
-              <div className="text-center border-l border-stone-100">
-                <span className="block text-2xl font-serif font-bold text-foreground">
-                  {t("prices.value_3")}
-                </span>
-                <span className="text-sm text-muted-foreground font-bold uppercase">
-                  {t("prices.scoop_3")}
+                  {t("prices.scoop")}
                 </span>
               </div>
               <div className="text-center border-l border-stone-100">
@@ -112,6 +153,22 @@ export default async function MenuPage({ params }: MenuProps) {
                   {t("prices.cream")}
                 </span>
               </div>
+              <div className="text-center border-l border-stone-100">
+                <span className="block text-2xl font-serif font-bold text-foreground">
+                  {t("prices.value_kids")}
+                </span>
+                <span className="text-sm text-muted-foreground font-bold uppercase">
+                  {t("prices.kids")}
+                </span>
+              </div>
+              <div className="text-center border-l border-stone-100 flex flex-col items-center justify-center">
+                <span className="inline-block bg-primary text-white text-xs font-bold px-2 py-1 rounded-full mb-1">
+                  Vegan Options
+                </span>
+                <span className="text-sm text-muted-foreground font-bold uppercase">
+                  Available
+                </span>
+              </div>
             </div>
           </div>
         </Reveal>
@@ -119,8 +176,6 @@ export default async function MenuPage({ params }: MenuProps) {
         {/* 3. Menu Categories */}
         <div className="space-y-16">
           {MENU_SECTIONS.map((section) => (
-            // We wrap the entire section in Reveal.
-            // As you scroll down, the next category fades in.
             <Reveal key={section.id} className="scroll-mt-24">
               <div id={section.id}>
                 <div className="flex items-center gap-4 mb-8">
@@ -134,15 +189,14 @@ export default async function MenuPage({ params }: MenuProps) {
                   {section.items.map((item) => (
                     <div
                       key={item.id}
-                      className="flex justify-between items-start group"
+                      className={`flex justify-between items-start group p-4 rounded-xl transition-all ${item.highlight ? "bg-stone-50 border border-stone-100 shadow-sm" : ""}`}
                     >
                       <div>
                         <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors flex items-center gap-2">
                           {t(`items.${item.id}.name`)}
-                          {/* Vegan Badge for Fruit section */}
-                          {section.id === "fruit" && (
-                            <span className="text-[10px] bg-green-100 text-green-700 px-1.5 py-0.5 rounded border border-green-200 uppercase tracking-wide">
-                              Vegan
+                          {item.highlight && (
+                            <span className="text-[10px] bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded border border-amber-200 uppercase tracking-wide">
+                              Bestseller
                             </span>
                           )}
                         </h3>
@@ -153,15 +207,15 @@ export default async function MenuPage({ params }: MenuProps) {
 
                       <div className="text-right">
                         {item.price && (
-                          <span className="block font-bold text-primary">
+                          <span className="block font-bold text-primary text-lg">
                             {item.price}
                           </span>
                         )}
-
-                        {/* Allergens (Small codes) */}
-                        <div className="text-[10px] text-stone-400 mt-1 uppercase font-mono">
-                          {item.allergens.join(", ")}
-                        </div>
+                        {item.allergens.length > 0 && (
+                          <div className="text-[9px] text-stone-300 mt-1 uppercase font-mono">
+                            {item.allergens.join(", ")}
+                          </div>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -178,9 +232,9 @@ export default async function MenuPage({ params }: MenuProps) {
               {t("allergens_label")}
             </p>
             <p className="text-xs text-stone-400 leading-relaxed max-w-2xl">
-              A: Gluten, C: Eier, G: Milch (Laktose), H: Schalenfrüchte. Eine
-              detaillierte Allergenkarte liegt an der Theke aus. Alle Preise
-              inkl. MwSt.
+              {t("allergens_note")}
+              <br />
+              Alle Preise inkl. Bedienung und MwSt.
             </p>
           </div>
         </Reveal>

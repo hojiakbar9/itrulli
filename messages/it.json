@@ -75,36 +75,97 @@
     "legal_cookie": "Impostazioni Cookie",
     "copyright": "Tutti i diritti riservati."
   },  "Menu": {
-    "title": "Il Nostro Menu Gelati",
-    "description": "Gelato artigianale, frutta fresca e ingredienti di altissima qualità. Tutti i gusti alla frutta sono 100% vegani.",
+    "title": "Eiskarte & Prezzi",
+    "description": "Le nostre specialità: Spaghetti Eis, Classici, Gelato alla frutta vegano e Caffè italiano.",
     "allergens_label": "Allergeni & Additivi",
-    "sections": {
-      "milk": "Gelati alla Crema",
-      "fruit": "Gelati alla Frutta (Vegani)",
-      "sundaes": "Coppe Gelato"
-    },
+    "allergens_note": "Legenda codici: G=Latte, A=Glutine, H=Frutta a guscio, E=Arachidi, 2=Coloranti. Chiedi al personale per la lista completa.",
     "prices": {
-      "scoop_1": "1 Pallina",
-      "scoop_2": "2 Palline",
-      "scoop_3": "3 Palline",
-      "cream": "Panna Montata",
-      "value_1": "1,80 €",
-      "value_2": "3,40 €",
-      "value_3": "4,80 €",
-      "value_cream": "1,20 €"
+      "value_scoop": "1,80 €",
+      "scoop": "Pallina",
+      "value_cream": "1,50 €",
+      "cream": "Panna",
+      "value_kids": "1,50 €",
+      "kids": "Pallina Bambini"
+    },
+    "sections": {
+      "kids": "Per Bambini",
+      "spaghetti": "Spaghetti Eis",
+      "classics": "Coppe Classiche",
+      "candy_nut": "Specialità Golose",
+      "yogurt": "Yogurt & Frutta",
+      "drinks": "Caffè & Bevande"
     },
     "items": {
-      "vanilla": { "name": "Vaniglia del Madagascar", "desc": "Con vera vaniglia Bourbon" },
-      "chocolate": { "name": "Cioccolato Fondente", "desc": "70% di cacao" },
-      "pistachio": { "name": "Pistacchio di Bronte", "desc": "Pistacchi siciliani (DOP)" },
-      "hazelnut": { "name": "Nocciola", "desc": "Nocciole del Piemonte" },
-      "stracciatella": { "name": "Stracciatella", "desc": "Con scaglie croccanti di cioccolato" },
-      "strawberry": { "name": "Fragola", "desc": "Fragole fresche, di stagione" },
-      "lemon": { "name": "Limone", "desc": "Limoni di Amalfi" },
-      "mango": { "name": "Mango", "desc": "Mango Alphonso" },
-      "spaghetti": { "name": "Spaghetti al Gelato", "desc": "Gelato alla vaniglia, salsa di fragole, cioccolato bianco" },
-      "tartufo": { "name": "Tartufo Nero", "desc": "Gelato al cioccolato e nocciola con copertura al cacao" }
+      "pinocchio": {
+        "name": "Coppa Pinocchio",
+        "desc": "Gelato alla vaniglia e fragola, panna montata, cialda croccante e Smarties colorati."
+      },
+      "micky": {
+        "name": "Coppa Topolino",
+        "desc": "Gelato al cioccolato e vaniglia con decorazioni divertenti di biscotto per i più piccoli."
+      },
+      "spaghetti_classic": {
+        "name": "Spaghetti Classico",
+        "desc": "Il classico: Gelato alla vaniglia su letto di panna, salsa di fragole fatta in casa e scaglie di cioccolato bianco."
+      },
+      "spaghetti_choco": {
+        "name": "Spaghetti Cioccolato",
+        "desc": "Per gli amanti del cacao: Gelato al cioccolato e vaniglia, panna, salsa al cioccolato e scaglie fondenti."
+      },
+      "spaghetti_neri": {
+        "name": "Spaghetti Neri",
+        "desc": "Variazione intensa con gelato al cioccolato fondente, salsa al cioccolato nero e nocciole."
+      },
+      "pizza": {
+        "name": "Pizza Eis",
+        "desc": "Un piatto di frutta fresca colorata servita su una base di gelato alla vaniglia e salsa di frutta."
+      },
+      "banana_split": {
+        "name": "Banana Split",
+        "desc": "Banana fresca, gelato alla vaniglia e cioccolato, panna montata, salsa al cioccolato e mandorle croccanti."
+      },
+      "copacabana": {
+        "name": "Coppa Copacabana",
+        "desc": "Un tocco esotico con frutta tropicale fresca, gelato misto e salsa al mango."
+      },
+      "rocher": {
+        "name": "Coppa Rocher",
+        "desc": "Gelato al cioccolato e nocciola, salsa di wafer croccante, nocciole intere e cioccolatino Rocher."
+      },
+      "raffaello": {
+        "name": "Coppa Raffaello",
+        "desc": "Sogno di cocco: Gelato al cocco e vaniglia, mandorle, salsa bianca e cioccolatino Raffaello."
+      },
+      "krokant": {
+        "name": "Coppa Croccante",
+        "desc": "Gelato alla noce e caramello, guarnito con croccante di nocciole, salsa al caramello e panna."
+      },
+      "yogurt_fruit": {
+        "name": "Yogurt Frutta",
+        "desc": "Leggero gelato allo yogurt naturale guarnito con abbondante frutta fresca di stagione."
+      },
+      "yogurt_amarena": {
+        "name": "Yogurt Amarena",
+        "desc": "Gelato allo yogurt arricchito con vere amarene sciroppate e il loro succo dolce."
+      },
+      "espresso": {
+        "name": "Espresso",
+        "desc": "Classico caffè italiano."
+      },
+      "cappuccino": {
+        "name": "Cappuccino",
+        "desc": "Espresso con schiuma di latte cremosa."
+      },
+      "milkshake": {
+        "name": "Milkshake",
+        "desc": "Frullato fresco preparato con il gusto di gelato a tua scelta."
+      },
+      "aperol": {
+        "name": "Aperol Spritz",
+        "desc": "Prosecco, Aperol e soda."
+      }
     }
+  
   },
   "Gallery": {
     "title": "La Nostra Galleria",

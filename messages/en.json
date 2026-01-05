@@ -79,36 +79,97 @@
     "copyright": "All rights reserved."
   },
   "Menu": {
-    "title": "Our Ice Cream Menu",
-    "description": "Handcrafted gelato, fresh fruits, and the finest ingredients. All fruit flavors are 100% vegan.",
+    "title": "Ice Cream Menu & Prices",
+    "description": "Our current selection: Spaghetti Ice Cream, Classics, Vegan Fruit Ice Cream, and Italian Coffee.",
     "allergens_label": "Allergens & Additives",
-    "sections": {
-      "milk": "Milk-Based Ice Cream",
-      "fruit": "Fruit Sorbet (Vegan)",
-      "sundaes": "Ice Cream Sundaes"
-    },
+    "allergens_note": "Codes: G=Milk, A=Gluten, H=Nuts, E=Peanuts, 2=Colors. Please ask staff for the full list.",
     "prices": {
-      "scoop_1": "1 Scoop",
-      "scoop_2": "2 Scoops",
-      "scoop_3": "3 Scoops",
-      "cream": "Whipped Cream Portion",
-      "value_1": "€1.80",
-      "value_2": "€3.40",
-      "value_3": "€4.80",
-      "value_cream": "€1.20"
+      "value_scoop": "1.80 €",
+      "scoop": "Per Scoop",
+      "value_cream": "1.50 €",
+      "cream": "Whipped Cream",
+      "value_kids": "1.50 €",
+      "kids": "Kids Scoop"
+    },
+    "sections": {
+      "kids": "For Kids",
+      "spaghetti": "Spaghetti Ice Cream",
+      "classics": "Classic Sundaes",
+      "candy_nut": "Candy & Nut Specials",
+      "yogurt": "Yogurt & Fruit",
+      "drinks": "Coffee & Drinks"
     },
     "items": {
-      "vanilla": { "name": "Madagascar Vanilla", "desc": "Made with real Bourbon vanilla" },
-      "chocolate": { "name": "Dark Chocolate", "desc": "70% cocoa content" },
-      "pistachio": { "name": "Bronte Pistachio", "desc": "Sicilian pistachios (PDO)" },
-      "hazelnut": { "name": "Hazelnut", "desc": "Piedmont hazelnuts" },
-      "stracciatella": { "name": "Stracciatella", "desc": "With crunchy chocolate pieces" },
-      "strawberry": { "name": "Strawberry", "desc": "Fresh strawberries, seasonal" },
-      "lemon": { "name": "Lemon", "desc": "Amalfi lemons" },
-      "mango": { "name": "Mango", "desc": "Alphonso mango" },
-      "spaghetti": { "name": "Spaghetti Ice Cream", "desc": "Vanilla ice cream, strawberry sauce, white chocolate" },
-      "tartufo": { "name": "Tartufo Nero", "desc": "Chocolate & hazelnut ice cream with cocoa coating" }
+      "pinocchio": {
+        "name": "Pinocchio Cup",
+        "desc": "Vanilla and strawberry ice cream, whipped cream, crunchy wafer cone, and colorful Smarties."
+      },
+      "micky": {
+        "name": "Micky Mouse Cup",
+        "desc": "Chocolate and vanilla ice cream decorated with cookies for our little guests."
+      },
+      "spaghetti_classic": {
+        "name": "Spaghetti Classic",
+        "desc": "The original: Vanilla ice cream pressed like pasta over whipped cream, topped with strawberry sauce and white chocolate shavings."
+      },
+      "spaghetti_choco": {
+        "name": "Spaghetti Choco",
+        "desc": "For chocolate lovers: Chocolate and vanilla ice cream, whipped cream, dark chocolate sauce, and shavings."
+      },
+      "spaghetti_neri": {
+        "name": "Spaghetti Dark",
+        "desc": "Dark chocolate ice cream variation with intense cocoa sauce and hazelnuts."
+      },
+      "pizza": {
+        "name": "Ice Cream Pizza",
+        "desc": "A colorful plate of fresh mixed fruits served on a base of vanilla ice cream with fruit sauce."
+      },
+      "banana_split": {
+        "name": "Banana Split",
+        "desc": "Fresh banana, vanilla and chocolate ice cream, whipped cream, rich chocolate sauce, and almond flakes."
+      },
+      "copacabana": {
+        "name": "Copacabana Cup",
+        "desc": "An exotic mix of fresh tropical fruits, mixed ice cream, and mango sauce."
+      },
+      "rocher": {
+        "name": "Rocher Cup",
+        "desc": "Chocolate and hazelnut ice cream, wafer sauce, whole hazelnuts, and a Rocher chocolate."
+      },
+      "raffaello": {
+        "name": "Raffaello Cup",
+        "desc": "Coconut dream: Coconut and vanilla ice cream, almonds, white sauce, and a Raffaello chocolate."
+      },
+      "krokant": {
+        "name": "Croquant Cup",
+        "desc": "Walnut and caramel ice cream topped with hazelnut brittle (croquant), caramel sauce, and cream."
+      },
+      "yogurt_fruit": {
+        "name": "Yogurt Fruit",
+        "desc": "Light natural yogurt ice cream topped with plenty of fresh seasonal fruits."
+      },
+      "yogurt_amarena": {
+        "name": "Yogurt Amarena",
+        "desc": "Yogurt ice cream enriched with candied Amarena cherries and sweet cherry syrup."
+      },
+      "espresso": {
+        "name": "Espresso",
+        "desc": "Classic Italian black coffee."
+      },
+      "cappuccino": {
+        "name": "Cappuccino",
+        "desc": "Espresso with steamed milk foam."
+      },
+      "milkshake": {
+        "name": "Milkshake",
+        "desc": "Freshly blended shake made with your choice of ice cream flavor."
+      },
+      "aperol": {
+        "name": "Aperol Spritz",
+        "desc": "Prosecco, Aperol, and soda."
+      }
     }
+  
   },
   "Gallery": {
     "title": "Our Gallery",

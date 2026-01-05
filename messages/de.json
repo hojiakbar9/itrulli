@@ -81,35 +81,95 @@
   
   "Menu": {
     "title": "Unsere Eiskarte",
-    "description": "Handgemachtes Gelato, frische Früchte und beste Zutaten. Alle Fruchtsorten sind 100% vegan.",
+    "description": "Hausgemachtes Eis, liebevoll kreierte Becher und italienische Kaffeespezialitäten.",
     "allergens_label": "Allergene & Zusatzstoffe",
-    "sections": {
-      "milk": "Milchspeiseeis",
-      "fruit": "Fruchteis (Vegan)",
-      "sundaes": "Eisbecher"
-    },
+    "allergens_note": "A: Gluten, C: Eier, G: Milch, H: Schalenfrüchte. Eine detaillierte Liste aller Zusatzstoffe (1-20) liegt an der Theke aus.",
     "prices": {
-      "scoop_1": "1 Kugel",
-      "scoop_2": "2 Kugeln",
-      "scoop_3": "3 Kugeln",
+      "value_scoop": "1,80 €",
+      "scoop": "1 Kugel",
+      "value_cream": "1,80 €",
       "cream": "Portion Sahne",
-      "value_1": "1,80 €",
-      "value_2": "3,40 €",
-      "value_3": "4,80 €",
-      "value_cream": "1,20 €"
+      "value_kids": "1,50 €",
+      "kids": "Kinder-Portion"
+    },
+    "sections": {
+      "kids": "Für unsere Kinder",
+      "spaghetti": "Spaghetti Eis Spezialitäten",
+      "classics": "Klassiker & Früchte",
+      "candy_nut": "Nuss & Süßigkeiten",
+      "yogurt": "Joghurt Träume",
+      "drinks": "Getränke & Shakes"
     },
     "items": {
-      "vanilla": { "name": "Madagaskar Vanille", "desc": "Mit echter Bourbon Vanille" },
-      "chocolate": { "name": "Dunkle Schokolade", "desc": "70% Kakaoanteil" },
-      "pistachio": { "name": "Pistazie Bronte", "desc": "Sizilianische Pistazien (DOP)" },
-      "hazelnut": { "name": "Haselnuss", "desc": "Piemonteser Haselnüsse" },
-      "stracciatella": { "name": "Stracciatella", "desc": "Mit knackigen Schokostücken" },
-      "strawberry": { "name": "Erdbeere", "desc": "Frische Erdbeeren, Saison" },
-      "lemon": { "name": "Zitrone", "desc": "Amalfi Zitronen" },
-      "mango": { "name": "Mango", "desc": "Alphonso Mango" },
-      "spaghetti": { "name": "Spaghetti Eis", "desc": "Vanilleeis, Erdbeersauce, weiße Schokolade" },
-      "tartufo": { "name": "Tartufo Nero", "desc": "Schoko- & Haselnusseis, Kakaomantel" }
+      "pinocchio": {
+        "name": "Pinocchio Becher",
+        "desc": "Vanille- & Erdbeereis, bunte Streusel, Sahne"
+      },
+      "micky": {
+        "name": "Micky Mouse",
+        "desc": "Vanilleeis, Schokosoße, bunte Streusel, Sahne"
+      },
+      "spaghetti_classic": {
+        "name": "Spaghetti Eis",
+        "desc": "Vanilleeis, Erdbeersoße, weiße Schokoraspeln, Sahne"
+      },
+      "spaghetti_choco": {
+        "name": "Spaghetti Schoko",
+        "desc": "Vanilleeis, Schokosoße, weiße Schokoraspeln, Sahne"
+      },
+      "spaghetti_neri": {
+        "name": "Spaghetti Neri",
+        "desc": "Schokoeis, Nüsse, Schokoraspeln, Schokosoße, Sahne"
+      },
+      "pizza": {
+        "name": "Pizza Eis",
+        "desc": "Vanilleeis, frische Früchte, Erdbeersoße, weiße Schokolade"
+      },
+      "banana_split": {
+        "name": "Banana Split",
+        "desc": "Gemischtes Eis, Banane, Amarena Kirschen, Schokosoße, Sahne"
+      },
+      "copacabana": {
+        "name": "Copacabana",
+        "desc": "Schoko- & Stracciatellaeis, Banane, Schokosoße, Schokoraspeln"
+      },
+      "rocher": {
+        "name": "Rocher Becher",
+        "desc": "Milcheis, Rocher, Krokant, Schokosoße, Sahne"
+      },
+      "raffaello": {
+        "name": "Raffaello Becher",
+        "desc": "Nusseis, Kokosraspeln, Batida de Coco, Schokosoße"
+      },
+      "krokant": {
+        "name": "Krokant Becher",
+        "desc": "Milcheis, Krokantstreusel, Karamellsoße, Sahne"
+      },
+      "yogurt_fruit": {
+        "name": "Joghurt Spezial",
+        "desc": "Joghurteis, Naturjoghurt, frische Früchte, Tropicsoße"
+      },
+      "yogurt_amarena": {
+        "name": "Joghurt Amarena",
+        "desc": "Joghurteis, Naturjoghurt, Amarenakirschen, Soße"
+      },
+      "espresso": {
+        "name": "Espresso / Kaffee",
+        "desc": "Original italienische Röstung"
+      },
+      "cappuccino": {
+        "name": "Cappuccino",
+        "desc": "Mit Milchschaum oder Sahne"
+      },
+      "milkshake": {
+        "name": "Milchshakes",
+        "desc": "In verschiedenen Geschmacksrichtungen (0,3L / 0,4L)" },
+      "aperol": {
+        "name": "Aperol Spritz",
+        "desc": "Der Klassiker auf Eis"
+      }
     }
+  
   },
   "Gallery": {
     "title": "Unsere Galerie",
