@@ -1,33 +1,23 @@
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import Reveal from "./Reveal"; // <--- Import the new component
+import { client } from "@/sanity/lib/client";
+import imageUrlBuilder from "@sanity/image-url";
+import Image from "next/image";
 
-const FLAVORS = [
-  {
-    id: "pistachio",
-    color: "bg-[#93C572]",
-    isVegan: false,
-    allergens: ["G", "H"],
-  },
-  {
-    id: "chocolate",
-    color: "bg-[#3B2F2F]",
-    isVegan: true,
-    allergens: [],
-  },
-  {
-    id: "lemon",
-    color: "bg-[#F4E04D]",
-    isVegan: true,
-    allergens: [],
-  },
-  {
-    id: "stracciatella",
-    color: "bg-[#E7E5E4]",
-    isVegan: false,
-    allergens: ["G"],
-  },
-];
+const builder = imageUrlBuilder(client);
+
+function urlFor(source: any) {
+  return builder.image(source);
+}
+
+const getFlavorsQuery = (locale: string) => `*[_type == "featuredFlavor"]{
+  _id,
+  "name": name.${locale},
+  "description": description.${locale},
+  image,
+  color
+}`;
 
 interface FeaturedProps {
   locale: string;
@@ -35,6 +25,8 @@ interface FeaturedProps {
 
 export default async function FeaturedFlavors({ locale }: FeaturedProps) {
   const t = await getTranslations({ locale, namespace: "Featured" });
+  const flavorsQuery = getFlavorsQuery(locale);
+  const flavors = await client.fetch(flavorsQuery);
 
   return (
     <section className="py-20 bg-stone-50 overflow-hidden">
@@ -56,11 +48,11 @@ export default async function FeaturedFlavors({ locale }: FeaturedProps) {
 
         {/* Carousel - We animate the CARDS individually */}
         <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide">
-          {FLAVORS.map((flavor, index) => (
+          {flavors.map((flavor: any, index: number) => (
             // We use Reveal on the wrapper div of each card
             // delay={index * 100} creates the cascade effect (0ms, 100ms, 200ms...)
             <Reveal
-              key={flavor.id}
+              key={flavor._id}
               delay={index * 100}
               className="snap-center shrink-0 w-[280px] md:w-[320px]"
             >
@@ -75,34 +67,21 @@ export default async function FeaturedFlavors({ locale }: FeaturedProps) {
 
                   {/* Image/Color Circle */}
                   <div className="relative w-48 h-48 mb-6 mt-4 transition-transform duration-500 group-hover:-translate-y-2 group-hover:scale-110">
-                    <div
-                      className={`w-full h-full rounded-full opacity-80 ${flavor.color} shadow-inner`}
-                    ></div>
+                    <Image
+                      src={urlFor(flavor.image).width(400).height(400).url()}
+                      alt={flavor.name}
+                      width={400}
+                      height={400}
+                      className={`w-full h-full rounded-full object-cover shadow-inner ${flavor.color}`}
+                    />
                   </div>
 
                   <h3 className="text-2xl font-serif font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {t(`flavors.${flavor.id}.name`)}
+                    {flavor.name}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4 flex-grow">
-                    {t(`flavors.${flavor.id}.desc`)}
+                    {flavor.description}
                   </p>
-
-                  <div className="flex gap-2 items-center justify-center mt-auto">
-                    {flavor.isVegan && (
-                      <span className="text-[10px] font-bold uppercase tracking-wide bg-green-100 text-green-700 px-2 py-1 rounded-full border border-green-200">
-                        Vegan
-                      </span>
-                    )}
-                    {flavor.allergens.map((a) => (
-                      <span
-                        key={a}
-                        className="w-6 h-6 rounded-full border border-stone-300 text-[10px] flex items-center justify-center text-stone-500 font-bold"
-                        title={`Allergen: ${a}`}
-                      >
-                        {a}
-                      </span>
-                    ))}
-                  </div>
                 </div>
               </div>
             </Reveal>
