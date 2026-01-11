@@ -19,7 +19,7 @@ export default async function HoursPage({ params }: HoursProps) {
 
   // Helper to construct Google Maps URL
   const getMapLink = (address: string) =>
-    `https://www.google.com/maps/search/?api=1&query=$${encodeURIComponent(
+    `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
       address
     )}`;
 
@@ -58,7 +58,7 @@ export default async function HoursPage({ params }: HoursProps) {
                 },
               ]}
               cta={t("cta_route")}
-              mapLink={getMapLink("Hauptstraße 12, 35037 Marburg")}
+              mapLink={getMapLink(t("marburg.address"))}
               imageColor="bg-[#93C572]" // Pistachio styling
             />
           </Reveal>
@@ -77,7 +77,7 @@ export default async function HoursPage({ params }: HoursProps) {
                 },
               ]}
               cta={t("cta_route")}
-              mapLink={getMapLink("Lahnstraße 5, 35091 Cölbe")}
+              mapLink={getMapLink(t("coelbe.address"))}
               imageColor="bg-[#D23C3C]" // Strawberry accent for contrast
             />
           </Reveal>
