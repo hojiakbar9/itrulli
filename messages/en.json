@@ -208,7 +208,8 @@
         { "days": "Saturday", "time": "9:00 PM - 6:00 PM" }
       ]
     },
-    "cta_route": "Get Directions"
+    "cta_route": "Get Directions",
+    "schedule_label": "Opening Hours:"
   },
   "Contact": {
     "title": "Contact",

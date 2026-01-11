@@ -207,7 +207,8 @@
         { "days": "Samsatg", "time": "09:00 - 18:00 Uhr" }
       ]
     },
-    "cta_route": "Route planen"
+    "cta_route": "Route planen",
+    "schedule_label": "Öffnungszeiten:"
   },
   "Contact": {
     "title": "Kontakt",

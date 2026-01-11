@@ -2,12 +2,28 @@ import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/app/componets/Reveal";
+import { client } from "@/sanity/lib/client";
 
 export const metadata: Metadata = {
   title: "Öffnungszeiten & Standorte | iTrulli Gelateria",
   description:
     "Besuchen Sie uns in Marburg oder Cölbe. Hier finden Sie unsere Adressen und aktuellen Öffnungszeiten.",
 };
+
+const getLocationsQuery = (locale: string) => `
+*[_type == "locations" && _id == "locations"][0]{
+  locations[]{
+    _key,
+    city,
+    address,
+    phone,
+    schedule[]{
+      "days": coalesce(days.${locale}, days.de),
+      time
+    },
+    imageColor
+  }
+}`;
 
 interface HoursProps {
   params: Promise<{ locale: string }>;
@@ -16,6 +32,9 @@ interface HoursProps {
 export default async function HoursPage({ params }: HoursProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Hours" });
+  const locationsQuery = getLocationsQuery(locale);
+  const data = await client.fetch(locationsQuery);
+  const locations = data?.locations || [];
 
   // Helper to construct Google Maps URL
   const getMapLink = (address: string) =>
@@ -40,47 +59,20 @@ export default async function HoursPage({ params }: HoursProps) {
       {/* Locations Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* LOCATION 1: MARBURG (Delay 200ms) */}
-          <Reveal delay={200} className="h-full">
-            <LocationCard
-              city={t("marburg.city")}
-              address={t("marburg.address")}
-              phone={t("marburg.phone")}
-              scheduleLabel={t("marburg.schedule_label")}
-              schedule={[
-                {
-                  days: t("marburg.schedule.0.days"),
-                  time: t("marburg.schedule.0.time"),
-                },
-                {
-                  days: t("marburg.schedule.1.days"),
-                  time: t("marburg.schedule.1.time"),
-                },
-              ]}
-              cta={t("cta_route")}
-              mapLink={getMapLink(t("marburg.address"))}
-              imageColor="bg-[#93C572]" // Pistachio styling
-            />
-          </Reveal>
-
-          {/* LOCATION 2: CÖLBE (Delay 400ms) */}
-          <Reveal delay={400} className="h-full">
-            <LocationCard
-              city={t("coelbe.city")}
-              address={t("coelbe.address")}
-              phone={t("coelbe.phone")}
-              scheduleLabel={t("coelbe.schedule_label")}
-              schedule={[
-                {
-                  days: t("coelbe.schedule.0.days"),
-                  time: t("coelbe.schedule.0.time"),
-                },
-              ]}
-              cta={t("cta_route")}
-              mapLink={getMapLink(t("coelbe.address"))}
-              imageColor="bg-[#D23C3C]" // Strawberry accent for contrast
-            />
-          </Reveal>
+          {locations.map((location: any, index: number) => (
+            <Reveal key={location._key} delay={index * 200} className="h-full">
+              <LocationCard
+                city={location.city}
+                address={location.address}
+                phone={location.phone}
+                scheduleLabel={t("schedule_label")}
+                schedule={location.schedule}
+                cta={t("cta_route")}
+                mapLink={getMapLink(location.address)}
+                imageColor={location.imageColor}
+              />
+            </Reveal>
+          ))}
         </div>
       </div>
     </div>

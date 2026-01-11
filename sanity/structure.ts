@@ -17,13 +17,19 @@ export const structure: StructureResolver = (S) =>
       S.listItem()
         .title("Contact Page")
         .id("contactPage")
-        .child(S.document().schemaType("contactPage").documentId("contactPage")),
+        .child(
+          S.document().schemaType("contactPage").documentId("contactPage")
+        ),
+      S.listItem()
+        .title("Locations and Hours")
+        .id("locations")
+        .child(S.document().schemaType("locations").documentId("locations")),
       S.divider(),
       // Document lists
       S.documentTypeListItem("job").title("Job Openings"),
       S.documentTypeListItem("galleryImage").title("Gallery Images"),
       S.documentTypeListItem("featuredFlavor").title("Featured Flavors"),
-      
+
       S.divider(),
       // Menu group
       S.listItem()

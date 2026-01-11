@@ -205,7 +205,8 @@
         { "days": "Sabato", "time": "09:00 - 18:00" }
       ]
     },
-    "cta_route": "Ottieni indicazioni"
+    "cta_route": "Ottieni indicazioni",
+    "schedule_label": "Orari di apertura:"
   },
   "Contact": {
     "title": "Contatti",
