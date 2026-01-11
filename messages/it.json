@@ -74,7 +74,13 @@
     "legal_privacy": "Privacy",
     "legal_cookie": "Impostazioni Cookie",
     "copyright": "Tutti i diritti riservati."
-  },  "Menu": {
+  },
+  "MenuPage": {
+    "kicker": "Il Nostro Menu",
+    "headline": "Una Sinfonia di Sapori",
+    "description": "Dai classici cremosi ai sorbetti fruttati – tutto fatto in casa secondo le ricette tradizionali. Scopri la nostra varietà di coppe, specialità di caffè e bevande rinfrescanti."
+  },
+  "Menu": {
     "title": "Eiskarte & Prezzi",
     "description": "Le nostre specialità: Spaghetti Eis, Classici, Gelato alla frutta vegano e Caffè italiano.",
     "allergens_label": "Allergeni & Additivi",

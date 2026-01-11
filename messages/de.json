@@ -78,7 +78,11 @@
     "legal_cookie": "Cookie-Einstellungen",
     "copyright": "Alle Rechte vorbehalten."
   },
-  
+  "MenuPage": {
+    "kicker": "Unser Menü",
+    "headline": "Eine Symphonie des Geschmacks",
+    "description": "Von cremigen Klassikern bis zu fruchtigen Sorbets – alles hausgemacht nach traditionellen Rezepten. Entdecken Sie unsere Vielfalt an Eisbechern, Kaffeespezialitäten und erfrischenden Getränken."
+  },
   "Menu": {
     "title": "Unsere Eiskarte",
     "description": "Hausgemachtes Eis, liebevoll kreierte Becher und italienische Kaffeespezialitäten.",

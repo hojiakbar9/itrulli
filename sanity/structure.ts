@@ -19,6 +19,19 @@ export const structure: StructureResolver = (S) =>
       S.documentTypeListItem("featuredFlavor").title("Featured Flavors"),
 
       S.divider(),
+      // Menu group
+      S.listItem()
+        .title("Menu")
+        .id("menu")
+        .child(
+          S.list()
+            .title("Menu")
+            .items([
+              S.documentTypeListItem("menuItem").title("Menu Items"),
+              S.documentTypeListItem("menuCategory").title("Categories"),
+            ])
+        ),
+      S.divider(),
       // Blog group
       S.listItem()
         .title("Blog")
