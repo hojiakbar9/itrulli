@@ -179,8 +179,8 @@
     "categories": {
       "all": "Tutti",
       "gelato": "Gelato",
-      "shop": "Ambiente",
-      "process": "Artigianato"
+      "ambiente": "Ambiente",
+      "handwerk": "Artigianato"
     }
   }, "Hours": {
     "title": "Le Nostre Sedi",

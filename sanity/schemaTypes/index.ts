@@ -5,11 +5,11 @@ import { postType } from "./postType";
 import { authorType } from "./authorType";
 import { featuredFlavorType } from "./featuredFlavorType";
 import { ourStoryType } from "./ourStoryType";
-
 import { heroType } from "./heroType";
 import { menuCategoryType } from "./menuCategoryType";
 import { menuItemType } from "./menuItemType";
 import { categoryType } from "./categoryType";
+import { galleryImageType } from "./galleryImageType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -22,5 +22,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     heroType,
     menuCategoryType,
     menuItemType,
+    galleryImageType,
   ],
 };

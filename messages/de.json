@@ -181,8 +181,8 @@
     "categories": {
       "all": "Alle",
       "gelato": "Gelato",
-      "shop": "Ambiente",
-      "process": "Handwerk"
+      "ambiente": "Ambiente",
+      "handwerk": "Handwerk"
     }
   }, "Hours": {
     "title": "Unsere Standorte",

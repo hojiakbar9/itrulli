@@ -2,12 +2,22 @@ import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import Reveal from "@/app/componets/Reveal";
 import GalleryGrid from "@/app/componets/GalleryGrid";
+import { client } from "@/sanity/lib/client";
 
 export const metadata: Metadata = {
   title: "Galerie | iTrulli Gelateria",
   description:
     "Fotos von unserem hausgemachten Eis, unserem Café und dem Team.",
 };
+
+const getGalleryQuery = (locale: string) => `
+*[_type == "galleryImage"]{
+  _id,
+  "alt": coalesce(alt.${locale}, alt.de),
+  category,
+  "imageUrl": image.asset->url,
+  "aspect": image.asset->metadata.dimensions.aspectRatio
+}`;
 
 interface GalleryProps {
   params: Promise<{ locale: string }>;
@@ -16,6 +26,8 @@ interface GalleryProps {
 export default async function GalleryPage({ params }: GalleryProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Gallery" });
+  const galleryQuery = getGalleryQuery(locale);
+  const images = await client.fetch(galleryQuery);
 
   return (
     <div className="bg-background min-h-screen pb-20">
@@ -33,7 +45,7 @@ export default async function GalleryPage({ params }: GalleryProps) {
 
       {/* The Grid Component */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <GalleryGrid />
+        <GalleryGrid images={images} />
       </div>
     </div>
   );

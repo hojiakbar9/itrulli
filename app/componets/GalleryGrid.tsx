@@ -1,85 +1,50 @@
 "use client";
 
 import { useState } from "react";
-// import Image from "next/image"; // Uncomment when ready
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-// Mock Data
-const IMAGES = [
-  {
-    id: 1,
-    src: "/gallery-1.jpg",
-    category: "gelato",
-    alt: "Pistachio Scoop Close up",
-    aspect: "aspect-[3/4]",
-  },
-  {
-    id: 2,
-    src: "/gallery-2.jpg",
-    category: "shop",
-    alt: "Shop Interior",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    id: 3,
-    src: "/gallery-3.jpg",
-    category: "process",
-    alt: "Making Gelato",
-    aspect: "aspect-square",
-  },
-  {
-    id: 4,
-    src: "/gallery-4.jpg",
-    category: "gelato",
-    alt: "Strawberry Cone",
-    aspect: "aspect-[3/4]",
-  },
-  {
-    id: 5,
-    src: "/gallery-5.jpg",
-    category: "shop",
-    alt: "Outdoor Seating",
-    aspect: "aspect-[16/9]",
-  },
-  {
-    id: 6,
-    src: "/gallery-6.jpg",
-    category: "process",
-    alt: "Fresh Ingredients",
-    aspect: "aspect-[3/4]",
-  },
-  {
-    id: 7,
-    src: "/gallery-7.jpg",
-    category: "gelato",
-    alt: "Chocolate Drizzle",
-    aspect: "aspect-square",
-  },
-  {
-    id: 8,
-    src: "/gallery-8.jpg",
-    category: "shop",
-    alt: "Coffee Counter",
-    aspect: "aspect-[4/3]",
-  },
-];
+// Define the type for a single image
+interface GalleryImage {
+  _id: string;
+  imageUrl: string;
+  category: string;
+  alt: string;
+  aspect: number;
+}
 
-export default function GalleryGrid() {
+interface GalleryGridProps {
+  images: GalleryImage[];
+}
+
+export default function GalleryGrid({ images }: GalleryGridProps) {
   const t = useTranslations("Gallery");
   const [filter, setFilter] = useState("all");
-  const [selectedImage, setSelectedImage] = useState<(typeof IMAGES)[0] | null>(
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(
     null
   );
 
+  // Dynamically create category list from images
+  const categories = ["all", ...Array.from(new Set(images.map((img) => img.category)))];
+
   // Filter Logic
   const filteredImages =
-    filter === "all" ? IMAGES : IMAGES.filter((img) => img.category === filter);
+    filter === "all" ? images : images.filter((img) => img.category === filter);
+
+  // Calculate aspect ratio for Tailwind CSS
+  const getAspectClass = (aspectRatio: number) => {
+    if (aspectRatio > 1.7) return "aspect-video"; // 16:9
+    if (aspectRatio > 1.2) return "aspect-[4/3]";
+    if (aspectRatio === 1) return "aspect-square";
+    if (aspectRatio > 0.6) return "aspect-[3/4]";
+    return "aspect-[9/16]"; // Portrait
+  };
 
   return (
     <div>
       {/* Category Filter Buttons */}
       <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-up">
-        {["all", "gelato", "shop", "process"].map((cat) => (
+        {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setFilter(cat)}
@@ -95,22 +60,20 @@ export default function GalleryGrid() {
       </div>
 
       {/* Masonry Grid Layout */}
-      {/* KEY={FILTER} is the secret sauce. It forces React to re-render the block when filter changes, triggering the animations again. */}
       <div
         key={filter}
         className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6"
       >
         {filteredImages.map((image, index) => (
           <div
-            key={image.id}
-            className="break-inside-avoid group cursor-pointer animate-fade-up" // Add animation class
-            style={{ animationDelay: `${index * 100}ms` }} // Staggered delay based on index
+            key={image._id}
+            className="break-inside-avoid group cursor-pointer animate-fade-up"
+            style={{ animationDelay: `${index * 100}ms` }}
             onClick={() => setSelectedImage(image)}
           >
             <div
-              className={`relative w-full ${image.aspect} rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300`}
+              className={`relative w-full ${getAspectClass(image.aspect)} rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300`}
             >
-              {/* Overlay with Zoom Icon */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 duration-300">
                 <svg
                   className="w-8 h-8 text-white drop-shadow-md"
@@ -126,12 +89,7 @@ export default function GalleryGrid() {
                   />
                 </svg>
               </div>
-
-              {/* Placeholder Div */}
-              <div className="w-full h-full bg-stone-200 flex items-center justify-center text-stone-400 font-bold">
-                {/* <Image src={image.src} alt={image.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" /> */}
-                IMG: {image.category}
-              </div>
+              <Image src={image.imageUrl} alt={image.alt} fill className="object-cover transition-transform duration-700 group-hover:scale-105" />
             </div>
           </div>
         ))}
@@ -140,10 +98,9 @@ export default function GalleryGrid() {
       {/* Lightbox Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in" // Simple fade for background
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
           onClick={() => setSelectedImage(null)}
         >
-          {/* Modal Content - animating Scale In */}
           <div
             className="relative max-w-5xl w-full max-h-[90vh] rounded-lg overflow-hidden animate-fade-scale"
             onClick={(e) => e.stopPropagation()}
@@ -168,10 +125,7 @@ export default function GalleryGrid() {
             </button>
 
             <div className="relative w-full h-[80vh]">
-              <div className="w-full h-full bg-stone-800 flex items-center justify-center text-stone-500">
-                {/* <Image src={selectedImage.src} alt={selectedImage.alt} fill className="object-contain" /> */}
-                FULLSCREEN IMG
-              </div>
+               <Image src={selectedImage.imageUrl} alt={selectedImage.alt} fill className="object-contain" />
             </div>
 
             <div className="absolute bottom-0 left-0 right-0 p-4 text-center text-white/80 font-sans text-sm bg-gradient-to-t from-black/80 to-transparent">

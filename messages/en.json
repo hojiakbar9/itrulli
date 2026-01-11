@@ -182,8 +182,8 @@
     "categories": {
       "all": "All",
       "gelato": "Gelato",
-      "shop": "Atmosphere",
-      "process": "Craft"
+      "ambiente": "Atmosphere",
+      "handwerk": "Craft"
     }
   }, "Hours": {
     "title": "Our Locations",
