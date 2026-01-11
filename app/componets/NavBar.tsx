@@ -81,7 +81,7 @@ export default function Navbar() {
             {/* CTA Button */}
 
             <Link
-              href={`/${locale}/contact`}
+              href={`/${locale}/hours`}
               className="bg-primary text-white px-5 py-2 rounded-full font-medium hover:bg-primary-hover transition-colors shadow-sm whitespace-nowrap"
             >
               {t("cta_visit")}
