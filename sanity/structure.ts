@@ -16,6 +16,7 @@ export const structure: StructureResolver = (S) =>
         .child(S.document().schemaType("ourStory").documentId("ourStory")),
       S.divider(),
       // Document lists
+      S.documentTypeListItem("job").title("Job Openings"),
       S.documentTypeListItem("galleryImage").title("Gallery Images"),
       S.documentTypeListItem("featuredFlavor").title("Featured Flavors"),
       

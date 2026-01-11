@@ -2,12 +2,21 @@ import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/app/componets/Reveal";
+import { client } from "@/sanity/lib/client";
 
 export const metadata: Metadata = {
   title: "Karriere & Jobs | iTrulli Gelateria",
   description:
     "Werde Teil unseres Teams! Wir suchen Servicekräfte, Eisverkäufer und Eismacher in Marburg.",
 };
+
+const getJobsQuery = (locale: string) => `
+*[_type == "job"] | order(order asc) {
+  _id,
+  "title": coalesce(title.${locale}, title.de),
+  "jobType": coalesce(jobType.${locale}, jobType.de),
+  "description": coalesce(description.${locale}, description.de)
+}`;
 
 interface CareersProps {
   params: Promise<{ locale: string }>;
@@ -16,9 +25,8 @@ interface CareersProps {
 export default async function CareersPage({ params }: CareersProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Careers" });
-
-  // Mock Job Data
-  const JOBS = ["service", "counter", "production"];
+  const jobsQuery = getJobsQuery(locale);
+  const jobs = await client.fetch(jobsQuery);
 
   return (
     <div className="bg-background min-h-screen pb-20">
@@ -44,13 +52,11 @@ export default async function CareersPage({ params }: CareersProps) {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* 2. Benefits Grid (Why work here?) */}
-        {/* Staggered Animation: 0ms, 200ms, 400ms */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
           {[1, 2, 3].map((num, index) => (
             <Reveal key={num} delay={index * 200} className="h-full">
               <div className="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm text-center hover:shadow-md transition-shadow h-full">
                 <div className="w-16 h-16 bg-stone-50 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
-                  {/* Icons based on index */}
                   {num === 1 && (
                     <svg
                       className="w-8 h-8"
@@ -118,42 +124,48 @@ export default async function CareersPage({ params }: CareersProps) {
             </h2>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {JOBS.map((jobId, index) => (
-              <Reveal key={jobId} delay={index * 150} className="h-full">
-                <div className="bg-white rounded-2xl p-8 border border-stone-200 flex flex-col hover:border-primary transition-colors group h-full">
-                  <div className="mb-4">
-                    <span className="inline-block px-3 py-1 rounded-full bg-stone-100 text-stone-600 text-xs font-bold uppercase tracking-wide mb-3">
-                      {t(`jobs.${jobId}.type`)}
-                    </span>
-                    <h3 className="text-2xl font-serif font-bold text-foreground group-hover:text-primary transition-colors">
-                      {t(`jobs.${jobId}.title`)}
-                    </h3>
+          {jobs && jobs.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {jobs.map((job: any, index: number) => (
+                <Reveal key={job._id} delay={index * 150} className="h-full">
+                  <div className="bg-white rounded-2xl p-8 border border-stone-200 flex flex-col hover:border-primary transition-colors group h-full">
+                    <div className="mb-4">
+                      <span className="inline-block px-3 py-1 rounded-full bg-stone-100 text-stone-600 text-xs font-bold uppercase tracking-wide mb-3">
+                        {job.jobType}
+                      </span>
+                      <h3 className="text-2xl font-serif font-bold text-foreground group-hover:text-primary transition-colors">
+                        {job.title}
+                      </h3>
+                    </div>
+
+                    <p className="text-muted-foreground mb-8 flex-grow">
+                      {job.description}
+                    </p>
+
+                    <Link
+                      href={`/${locale}/contact?subject=Bewerbung: ${job.title}`}
+                      className="block w-full py-3 text-center rounded-xl bg-foreground text-white font-bold hover:bg-primary transition-colors"
+                    >
+                      {t("apply_btn")}
+                    </Link>
                   </div>
-
-                  <p className="text-muted-foreground mb-8 flex-grow">
-                    {t(`jobs.${jobId}.desc`)}
-                  </p>
-
-                  <Link
-                    href={`/${locale}/contact?subject=Jobs`}
-                    className="block w-full py-3 text-center rounded-xl bg-foreground text-white font-bold hover:bg-primary transition-colors"
-                  >
-                    {t("apply_btn")}
-                  </Link>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+                </Reveal>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center text-muted-foreground bg-stone-50 rounded-2xl p-8 border-dashed border-stone-300">
+              <p>{t("no_job_found")}</p>
+            </div>
+          )}
 
           {/* Unsolicited Application CTA */}
           <Reveal delay={300}>
-            <div className="mt-16 text-center bg-stone-50 rounded-2xl p-8 max-w-2xl mx-auto border border-dashed border-stone-300">
-              <p className="text-lg font-bold text-foreground mb-4">
-                Keine passende Stelle dabei?
+            <div className="mt-16 text-center">
+              <p className="text-lg text-foreground mb-2">
+                {t("no_job_cta_text")}
               </p>
               <Link
-                href={`/${locale}/contact?subject=Jobs`}
+                href={`/${locale}/contact?subject=Initiativbewerbung`}
                 className="text-primary font-bold hover:underline"
               >
                 {t("no_jobs_cta")} &rarr;

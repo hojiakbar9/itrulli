@@ -256,7 +256,9 @@
         "desc": "Hai esperienza nella produzione di gelato o vuoi imparare il mestiere da zero? Aiutaci a fare il miglior gelato della città."
       }
     },
-    "no_jobs_cta": "Candidatura spontanea"
+    "no_jobs_cta": "Candidatura spontanea",
+    "no_job_found": "Al momento non ci sono posizioni aperte. Torna a controllare presto!",
+    "no_job_cta_text": "Nessuna posizione adatta?"
   },"Legal": {
     "impressum": {
       "title": "Impressum",

@@ -258,7 +258,9 @@
         "desc": "Do you have experience in ice cream making or want to learn the craft from scratch? Help us make the best ice cream in town."
       }
     },
-    "no_jobs_cta": "Send unsolicited application"
+    "no_jobs_cta": "Send unsolicited application",
+    "no_job_found": "Currently, there are no open positions available. Please check back soon!",
+    "no_job_cta_text": "No suitable position?"
   },
   "Legal": {
     "impressum": {

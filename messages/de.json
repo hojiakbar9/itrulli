@@ -257,7 +257,9 @@
         "desc": "Du hast Erfahrung in der Eisherstellung oder willst das Handwerk von Grund auf lernen? Hilf uns, das beste Eis der Stadt zu machen."
       }
     },
-    "no_jobs_cta": "Initiativbewerbung senden"
+    "no_jobs_cta": "Initiativbewerbung senden",
+    "no_job_found": "Momentan sind keine offenen Stellen verfügbar. Schauen Sie bald wieder vorbei!",
+    "no_job_cta_text": "Keine passende Stelle dabei?"
   },
   
   "Legal": {

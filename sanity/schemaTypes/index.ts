@@ -10,6 +10,7 @@ import { menuCategoryType } from "./menuCategoryType";
 import { menuItemType } from "./menuItemType";
 import { categoryType } from "./categoryType";
 import { galleryImageType } from "./galleryImageType";
+import { jobType } from "./jobType";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -23,5 +24,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     menuCategoryType,
     menuItemType,
     galleryImageType,
+    jobType,
   ],
 };
