@@ -5,17 +5,42 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const t = useTranslations("Contact.form");
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
+    setErrorMessage("");
 
-    // Simulate network request (2 seconds)
-    // In a real app, you would fetch('/api/send-email', ...)
-    setTimeout(() => {
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message.");
+      }
+
       setStatus("success");
-    }, 2000);
+
+    } catch (error) {
+      console.error(error);
+      setStatus("error");
+      setErrorMessage("Sorry, something went wrong. Please try again later.");
+    }
   };
 
   if (status === "success") {
@@ -66,6 +91,7 @@ export default function ContactForm() {
         <input
           type="text"
           id="name"
+          name="name"
           required
           className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
           placeholder="John Doe"
@@ -83,6 +109,7 @@ export default function ContactForm() {
         <input
           type="email"
           id="email"
+          name="email"
           required
           className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
           placeholder="john@example.com"
@@ -99,6 +126,7 @@ export default function ContactForm() {
         </label>
         <select
           id="subject"
+          name="subject"
           className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all cursor-pointer"
         >
           <option>Allgemeine Anfrage / General</option>
@@ -118,11 +146,16 @@ export default function ContactForm() {
         </label>
         <textarea
           id="message"
+          name="message"
           rows={5}
           required
           className="w-full px-4 py-3 rounded-xl bg-stone-50 border border-stone-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"
         ></textarea>
       </div>
+
+       {status === "error" && (
+        <p className="text-red-500 text-sm font-bold">{errorMessage}</p>
+      )}
 
       {/* Submit Button */}
       <button
