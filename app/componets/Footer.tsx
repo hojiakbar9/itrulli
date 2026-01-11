@@ -134,7 +134,7 @@ export default async function Footer({ locale }: FooterProps) {
                   />
                 </svg>
                 <a
-                  href="tel:+496421123456"
+                  href="tel:+4915234139020"
                   className="hover:text-white transition-colors"
                 >
                   {t("phone")}
