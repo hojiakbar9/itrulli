@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import Reveal from "./Reveal"; // <--- Import the new component
-import { client } from "@/sanity/lib/client";
+import { client, fetchSanityData } from "@/sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
 import Image from "next/image";
 
@@ -26,7 +26,20 @@ interface FeaturedProps {
 export default async function FeaturedFlavors({ locale }: FeaturedProps) {
   const t = await getTranslations({ locale, namespace: "Featured" });
   const flavorsQuery = getFlavorsQuery(locale);
-  const flavors = await client.fetch(flavorsQuery);
+  const { data: flavors, error } = await fetchSanityData(flavorsQuery);
+
+  if (error || !flavors || flavors.length === 0) {
+    return (
+      <section className="py-20 bg-stone-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-center min-h-[30vh]">
+            <p className="text-red-500 text-lg">Failed to load featured flavors. Please try again later.</p>
+            {error && <p className="text-red-500 text-sm">{error}</p>}
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-20 bg-stone-50 overflow-hidden">

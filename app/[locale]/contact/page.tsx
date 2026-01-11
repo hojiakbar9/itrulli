@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Reveal from "@/app/componets/Reveal";
 import ContactForm from "@/app/componets/ContactForm";
 import { Fragment } from 'react';
-import { client } from "@/sanity/lib/client";
+import { client, fetchSanityData } from "@/sanity/lib/client";
 
 export const metadata: Metadata = {
   title: "Kontakt | iTrulli Gelateria",
@@ -32,7 +32,16 @@ export default async function ContactPage({ params }: ContactProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Contact" });
   const contactQuery = getContactQuery(locale);
-  const data = await client.fetch(contactQuery);
+  const { data, error } = await fetchSanityData(contactQuery);
+
+  if (error || !data) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh]">
+        <p className="text-red-500 text-lg">Failed to load contact data. Please try again later.</p>
+        {error && <p className="text-red-500 text-sm">{error}</p>}
+      </div>
+    );
+  }
 
   return (
     <div className="bg-background min-h-screen pb-20">

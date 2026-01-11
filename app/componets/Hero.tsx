@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { client } from "@/sanity/lib/client";
+import { client, fetchSanityData } from "@/sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(client);
@@ -26,10 +26,15 @@ interface HeroProps {
 
 export default async function Hero({ locale }: HeroProps) {
   const heroQuery = getHeroQuery(locale);
-  const hero = await client.fetch(heroQuery);
+  const { data: hero, error } = await fetchSanityData(heroQuery);
 
-  if (!hero) {
-    return <div>Hero not found</div>;
+  if (error || !hero) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh]">
+        <p className="text-red-500 text-lg">Failed to load hero data. Please try again later.</p>
+        {error && <p className="text-red-500 text-sm">{error}</p>}
+      </div>
+    );
   }
 
   return (

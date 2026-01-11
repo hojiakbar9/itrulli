@@ -1,4 +1,4 @@
-import { client } from "@/sanity/lib/client";
+import { client, fetchSanityData } from "@/sanity/lib/client";
 import { getTranslations } from "next-intl/server";
 
 const getMenuQuery = (locale: string) => `
@@ -21,8 +21,17 @@ export default async function MenuPage({
 }) {
   const { locale } = await params;
   const menuQuery = getMenuQuery(locale);
-  const menuData = await client.fetch(menuQuery);
+  const { data: menuData, error } = await fetchSanityData(menuQuery);
   const t = await getTranslations({ locale, namespace: "MenuPage" });
+
+  if (error || !menuData) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh]">
+        <p className="text-red-500 text-lg">Failed to load menu data. Please try again later.</p>
+        {error && <p className="text-red-500 text-sm">{error}</p>}
+      </div>
+    );
+  }
 
   return (
     <div className="bg-background text-foreground">
@@ -42,8 +51,9 @@ export default async function MenuPage({
 
       <main className="py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-6 space-y-20">
-          {menuData.map((category: any) => (
-            category.items.length > 0 && (
+          {menuData
+            .filter((category: any) => category.items.length > 0)
+            .map((category: any) => (
               <section key={category.title} className="scroll-mt-24">
                 <h2 className="text-3xl font-bold tracking-tight font-serif text-primary sm:text-4xl">
                   {category.title}
@@ -56,12 +66,12 @@ export default async function MenuPage({
                           {item.name}
                         </h3>
                         <p className="text-lg font-semibold text-foreground ml-4">
-                          {new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(item.price)}
+                          {new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR' }).format(item.price)}
                         </p>
                       </div>
                       {item.price_large && (
                         <p className="text-sm text-muted-foreground -mt-1 text-right">
-                            Groß: {new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(item.price_large)}
+                            {t("large")}: {new Intl.NumberFormat(locale, { style: 'currency', currency: 'EUR' }).format(item.price_large)}
                         </p>
                       )}
                       <p className="mt-2 text-base text-muted-foreground flex-grow">
@@ -71,8 +81,7 @@ export default async function MenuPage({
                   ))}
                 </div>
               </section>
-            )
-          ))}
+            ))}
         </div>
       </main>
     </div>

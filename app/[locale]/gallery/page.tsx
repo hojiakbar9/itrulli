@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import Reveal from "@/app/componets/Reveal";
 import GalleryGrid from "@/app/componets/GalleryGrid";
-import { client } from "@/sanity/lib/client";
+import { client, fetchSanityData } from "@/sanity/lib/client";
 
 export const metadata: Metadata = {
   title: "Galerie | iTrulli Gelateria",
@@ -27,7 +27,16 @@ export default async function GalleryPage({ params }: GalleryProps) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Gallery" });
   const galleryQuery = getGalleryQuery(locale);
-  const images = await client.fetch(galleryQuery);
+  const { data: images, error } = await fetchSanityData(galleryQuery);
+
+  if (error || !images) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh]">
+        <p className="text-red-500 text-lg">Failed to load gallery images. Please try again later.</p>
+        {error && <p className="text-red-500 text-sm">{error}</p>}
+      </div>
+    );
+  }
 
   return (
     <div className="bg-background min-h-screen pb-20">

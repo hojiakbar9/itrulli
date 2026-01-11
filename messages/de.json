@@ -81,7 +81,8 @@
   "MenuPage": {
     "kicker": "Unser Menü",
     "headline": "Eine Symphonie des Geschmacks",
-    "description": "Von cremigen Klassikern bis zu fruchtigen Sorbets – alles hausgemacht nach traditionellen Rezepten. Entdecken Sie unsere Vielfalt an Eisbechern, Kaffeespezialitäten und erfrischenden Getränken."
+    "description": "Von cremigen Klassikern bis zu fruchtigen Sorbets – alles hausgemacht nach traditionellen Rezepten. Entdecken Sie unsere Vielfalt an Eisbechern, Kaffeespezialitäten und erfrischenden Getränken.",
+    "large": "Groß"
   },
   "Menu": {
     "title": "Unsere Eiskarte",

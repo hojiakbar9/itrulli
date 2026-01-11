@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "./Reveal";
-import { client } from "@/sanity/lib/client";
+import { client, fetchSanityData } from "@/sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(client);
@@ -33,10 +33,19 @@ interface StoryProps {
 export default async function OurStory({ locale }: StoryProps) {
   const t = await getTranslations({ locale, namespace: "Story" });
   const storyQuery = getStoryQuery(locale);
-  const story = await client.fetch(storyQuery);
+  const { data: story, error } = await fetchSanityData(storyQuery);
 
-  if (!story) {
-    return <div>Story not found</div>;
+  if (error || !story) {
+    return (
+      <section className="py-24 bg-background overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-center min-h-[50vh]">
+            <p className="text-red-500 text-lg">Failed to load story data. Please try again later.</p>
+            {error && <p className="text-red-500 text-sm">{error}</p>}
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (
@@ -90,30 +99,7 @@ export default async function OurStory({ locale }: StoryProps) {
               </div>
             </Reveal>
 
-            {/* 3. CTA Button - Delays more (300ms) */}
-            <Reveal delay={300}>
-              <div className="mt-10">
-                <Link
-                  href={`/${locale}/about`}
-                  className="text-foreground font-bold border-b-2 border-primary hover:text-primary transition-colors pb-1 inline-flex items-center"
-                >
-                  {t("cta")}
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </Reveal>
+
           </div>
 
           {/* --- RIGHT: Collage Images --- */}

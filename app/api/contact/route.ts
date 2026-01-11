@@ -1,9 +1,33 @@
 import {NextResponse} from 'next/server'
 import nodemailer from 'nodemailer'
 
+const sanitize = (str: string) => {
+    if(!str) return '';
+    return str.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+const validate = (data: {name: string, email: string, subject: string, message: string}) => {
+    if (!data.name || !data.email || !data.subject || !data.message) {
+        return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+        return false;
+    }
+    return true;
+}
+
 export async function POST(request: Request) {
     try {
         const { name, email, subject, message } = await request.json();
+
+        if (!validate({ name, email, subject, message })) {
+            return NextResponse.json({ message: "Invalid input." }, { status: 400 });
+        }
+
+        const sanitizedName = sanitize(name);
+        const sanitizedSubject = sanitize(subject);
+        const sanitizedMessage = sanitize(message);
 
         const transporter = nodemailer.createTransport({
             host: process.env.EMAIL_SERVER_HOST,
@@ -16,18 +40,18 @@ export async function POST(request: Request) {
         });
 
         const mailOptions = {
-            from: `"${name}" <${process.env.EMAIL_SERVER_USER}>`, // sender address
+            from: `"${sanitizedName}" <${process.env.EMAIL_SERVER_USER}>`, // sender address
             to: process.env.EMAIL_TO, // list of receivers
             replyTo: email,
-            subject: `Kontaktformular: ${subject}`, // Subject line
-            text: message, // plain text body
+            subject: `Kontaktformular: ${sanitizedSubject}`, // Subject line
+            text: sanitizedMessage, // plain text body
             html: `
                 <h1>Neue Nachricht vom Kontaktformular</h1>
-                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Name:</strong> ${sanitizedName}</p>
                 <p><strong>E-Mail:</strong> ${email}</p>
-                <p><strong>Betreff:</strong> ${subject}</p>
+                <p><strong>Betreff:</strong> ${sanitizedSubject}</p>
                 <hr />
-                <p>${message.replace(/\n/g, '<br>')}</p>
+                <p>${sanitizedMessage.replace(/\n/g, '<br>')}</p>
             `,
         };
 

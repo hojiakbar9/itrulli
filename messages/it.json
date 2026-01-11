@@ -78,7 +78,8 @@
   "MenuPage": {
     "kicker": "Il Nostro Menu",
     "headline": "Una Sinfonia di Sapori",
-    "description": "Dai classici cremosi ai sorbetti fruttati – tutto fatto in casa secondo le ricette tradizionali. Scopri la nostra varietà di coppe, specialità di caffè e bevande rinfrescanti."
+    "description": "Dai classici cremosi ai sorbetti fruttati – tutto fatto in casa secondo le ricette tradizionali. Scopri la nostra varietà di coppe, specialità di caffè e bevande rinfrescanti.",
+    "large": "Grande"
   },
   "Menu": {
     "title": "Eiskarte & Prezzi",
