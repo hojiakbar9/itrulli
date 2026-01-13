@@ -28,7 +28,7 @@ export default async function Footer({ locale }: FooterProps) {
             <div className="flex gap-4">
               {/* Instagram */}
               <a
-                href="#"
+                href="https://www.instagram.com/itrulli_/"
                 className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-[#93C572] hover:text-white transition-all"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ export default async function Footer({ locale }: FooterProps) {
               </a>
               {/* Facebook */}
               <a
-                href="#"
+                href="https://www.facebook.com/p/I-Trulli-Eiscafe-Schlo%C3%9Fberg-Center-100064869136050/"
                 className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-[#93C572] hover:text-white transition-all"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
