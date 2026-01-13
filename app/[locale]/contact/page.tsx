@@ -1,7 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import Reveal from "@/app/componets/Reveal";
-import ContactForm from "@/app/componets/ContactForm";
 import { Fragment } from 'react';
 import { client, fetchSanityData } from "@/sanity/lib/client";
 
@@ -57,9 +56,9 @@ export default async function ContactPage({ params }: ContactProps) {
         </Reveal>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* --- LEFT COLUMN: Info & FAQ (Delay 200ms) --- */}
+      <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 items-start">
+          {/* --- Info & FAQ --- */}
           <Reveal delay={200}>
             <div className="space-y-12">
               {/* Direct Info */}
@@ -186,14 +185,6 @@ export default async function ContactPage({ params }: ContactProps) {
                 </div>
               )}
             </div>
-          </Reveal>
-
-          {/* --- RIGHT COLUMN: The Form (Delay 400ms) --- */}
-          <Reveal delay={400} className="relative">
-            {/* Decorative blob behind the form */}
-            <div className="absolute top-10 -right-10 w-64 h-64 bg-[#93C572]/20 rounded-full blur-3xl -z-10 animate-fade-scale"></div>
-
-            <ContactForm />
           </Reveal>
         </div>
       </div>
