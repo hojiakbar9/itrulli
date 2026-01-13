@@ -30,6 +30,7 @@ export default async function Footer({ locale }: FooterProps) {
               <a
                 href="https://www.instagram.com/itrulli_/"
                 className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-[#93C572] hover:text-white transition-all"
+                aria-label="Instagram"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                   <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2m0,2.2A3.6,3.6 0 0,0 4.2,7.8V16.2A3.6,3.6 0 0,0 7.8,19.8H16.2A3.6,3.6 0 0,0 19.8,16.2V7.8A3.6,3.6 0 0,0 16.2,4.2H7.8m8.4,14.6A6.2,6.2 0 1,1 16.2,12.6A6.2,6.2 0 0,1 16.2,18.8m0-2.2A4,4 0 1,0 12.2,16.6A4,4 0 0,0 16.2,16.6m4-10.4A1.4,1.4 0 1,1 18.8,4.8A1.4,1.4 0 0,1 20.2,6.2Z" />
@@ -39,6 +40,7 @@ export default async function Footer({ locale }: FooterProps) {
               <a
                 href="https://www.facebook.com/p/I-Trulli-Eiscafe-Schlo%C3%9Fberg-Center-100064869136050/"
                 className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-[#93C572] hover:text-white transition-all"
+                aria-label="Facebook"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.15 5.96C15.21 5.96 16.12 6.04 16.12 6.04V8.51H15.01C13.77 8.51 13.38 9.28 13.38 10.07V12.06H16.15L15.71 14.96H13.38V21.96C18.16 21.21 21.82 17.06 21.82 12.06C21.82 6.53 17.32 2.04 12 2.04Z" />
