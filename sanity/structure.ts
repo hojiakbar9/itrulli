@@ -24,6 +24,10 @@ export const structure: StructureResolver = (S) =>
         .title("Locations and Hours")
         .id("locations")
         .child(S.document().schemaType("locations").documentId("locations")),
+      S.listItem()
+        .title("Ice Lab Video Page")
+        .id("iceLab")
+        .child(S.document().schemaType("iceLab").documentId("iceLab")),
       S.divider(),
       // Document lists
       S.documentTypeListItem("job").title("Job Openings"),

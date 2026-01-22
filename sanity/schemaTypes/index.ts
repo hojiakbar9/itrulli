@@ -13,6 +13,7 @@ import { galleryImageType } from "./galleryImageType";
 import { jobType } from "./jobType";
 import { contactPageType } from "./contactPageType";
 import { locationsType } from "./locationsType";
+import { iceLabType } from "./iceLab";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -29,5 +30,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     jobType,
     contactPageType,
     locationsType,
+    iceLabType,
   ],
 };

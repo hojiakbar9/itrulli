@@ -3,6 +3,7 @@
     "home": "Home",
     "menu": "Menu",
     "gallery": "Gallery",
+    "icelab": "Ice Lab",
     "hours": "Opening Hours",
     "contact": "Contact",
     "careers": "Careers",
@@ -40,7 +41,6 @@
       }
     }
   },
-  
   "Story": {
     "kicker": "Our Story",
     "headline": "Tradition You Can Taste",
@@ -298,5 +298,9 @@
       "hosting_h": "Erfassung allgemeiner Informationen beim Besuch unserer Website",
       "hosting_text": "Wenn Sie auf unsere Website zugreifen, werden automatisch mittels eines Cookies Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers und ähnliches."
     }
+  },
+  "IceLab": {
+    "noVideo_title": "The Magic is Brewing... ✨",
+    "noVideo_message": "Our master gelato makers are currently filming the behind-the-scenes magic in our ice lab. Stay tuned for an exclusive look at how we craft our liquid happiness!"
   }
 }

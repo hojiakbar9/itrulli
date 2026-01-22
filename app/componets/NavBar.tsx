@@ -33,6 +33,7 @@ export default function Navbar() {
     { key: "home", path: "" },
     { key: "menu", path: "/menu" },
     { key: "gallery", path: "/gallery" },
+    { key: "icelab", path: "/icelab" },
     { key: "hours", path: "/hours" },
     { key: "contact", path: "/contact" },
     { key: "careers", path: "/careers" },

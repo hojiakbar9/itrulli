@@ -3,6 +3,7 @@
     "home": "Home",
     "menu": "Eiskarte",
     "gallery": "Galerie",
+    "icelab": "Eislabor",
     "hours": "Öffnungszeiten",
     "contact": "Kontakt",
     "careers": "Karriere",
@@ -298,5 +299,9 @@
       "hosting_h": "Erfassung allgemeiner Informationen beim Besuch unserer Website",
       "hosting_text": "Wenn Sie auf unsere Website zugreifen, werden automatisch mittels eines Cookies Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers und ähnliches."
     }
+  },
+  "IceLab": {
+    "noVideo_title": "Die Magie entsteht gerade... ✨",
+    "noVideo_message": "Unsere Eismacher drehen gerade hinter den Kulissen in unserem Eislabor. Freuen Sie sich auf einen exklusiven Blick darauf, wie wir unser flüssiges Glück zaubern!"
   }
 }

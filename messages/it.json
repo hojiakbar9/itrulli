@@ -3,6 +3,7 @@
     "home": "Home",
     "menu": "Menu",
     "gallery": "Galleria",
+    "icelab": "Laboratorio del Gelato",
     "hours": "Orari",
     "contact": "Contatti",
     "careers": "Lavora con noi",
@@ -295,6 +296,11 @@
       "hosting_h": "Erfassung allgemeiner Informationen beim Besuch unserer Website",
       "hosting_text": "Wenn Sie auf unsere Website zugreifen, werden automatisch mittels eines Cookies Informationen allgemeiner Natur erfasst. Diese Informationen (Server-Logfiles) beinhalten etwa die Art des Webbrowsers, das verwendete Betriebssystem, den Domainnamen Ihres Internet-Service-Providers und ähnliches."
     }
+  },
+  "IceLab": {
+    "noVideo_title": "La magia è in preparazione... ✨",
+    "noVideo_message": "I nostri maestri gelatieri stanno attualmente riprendendo dietro le quinte nel nostro laboratorio del gelato. Preparatevi a uno sguardo esclusivo su come creiamo la nostra felicità liquida!"
   }
+}
 
 }
