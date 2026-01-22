@@ -142,7 +142,7 @@ export default function IceLabPage({ params }: IceLabPageProps) {
           {data.ctaText && data.ctaLink && (
             <div className="flex justify-center">
               <Link
-                href={data.ctaLink}
+                href={`/${locale}${data.ctaLink}`}
                 className="inline-block px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
               >
                 {data.ctaText}

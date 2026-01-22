@@ -18,7 +18,7 @@ export const structure: StructureResolver = (S) =>
         .title("Contact Page")
         .id("contactPage")
         .child(
-          S.document().schemaType("contactPage").documentId("contactPage")
+          S.document().schemaType("contactPage").documentId("contactPage"),
         ),
       S.listItem()
         .title("Locations and Hours")
@@ -45,7 +45,7 @@ export const structure: StructureResolver = (S) =>
             .items([
               S.documentTypeListItem("menuItem").title("Menu Items"),
               S.documentTypeListItem("menuCategory").title("Categories"),
-            ])
+            ]),
         ),
       S.divider(),
       // Blog group
@@ -59,6 +59,6 @@ export const structure: StructureResolver = (S) =>
               S.documentTypeListItem("post").title("Posts"),
               S.documentTypeListItem("category").title("Categories"),
               S.documentTypeListItem("author").title("Authors"),
-            ])
+            ]),
         ),
     ]);
